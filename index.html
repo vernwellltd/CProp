@@ -245,6 +245,7 @@
       <h4 id="prog-done">0 tasks completed</h4>
       <p id="prog-left">Check off tasks as you work through the guide</p>
     </div>
+    <button onclick="resetProgress()" style="font-size:11px;padding:5px 10px;border:0.5px solid var(--border-med);border-radius:6px;background:var(--bg-card);color:var(--text-hint);cursor:pointer;font-family:inherit;flex-shrink:0;" title="Reset all progress">Reset</button>
   </div>
 
   <!-- MAIN NAV -->
@@ -267,9 +268,9 @@
       <div class="phase-header" onclick="togglePhase(this)">
         <div class="phase-num num-coral">1</div>
         <div class="phase-title-wrap"><div class="phase-title">Page titles &amp; meta descriptions</div><div class="phase-meta">The single biggest quick-win — currently nearly invisible to Google</div></div>
-        <div class="phase-chevron open">▼</div>
+        <div class="phase-chevron">▼</div>
       </div>
-      <div class="phase-body open">
+      <div class="phase-body">
         <div class="info-box">In Wix: go to each page → click the three dots → SEO Settings → fill in Page Title and Meta Description</div>
         <ul class="task-list">
           <li class="task-item">
@@ -406,9 +407,9 @@
       <div class="phase-header" onclick="togglePhase(this)">
         <div class="phase-num num-coral">1</div>
         <div class="phase-title-wrap"><div class="phase-title">Colour palette — extending the existing brand</div><div class="phase-meta">Works with the existing #00006A logo — no brand change required</div></div>
-        <div class="phase-chevron open">▼</div>
+        <div class="phase-chevron">▼</div>
       </div>
-      <div class="phase-body open">
+      <div class="phase-body">
         <div class="info-box">In Wix: Design → Site Design → Color Palette. These colours extend the existing logo.</div>
         <div class="color-swatches">
           <div class="swatch" style="background:#00006A;color:#fff"><div class="swatch-hex">#00006A</div><div class="swatch-name">Court Property Navy</div><div class="swatch-use">Primary — nav, headers, CTAs</div></div>
@@ -473,7 +474,7 @@
               <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Critical change</span></div>
             </div>
           </li>
-          <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Add two CTA buttons below the headline</div><div class="task-desc">Button 1 (gold): "Get a Free Quote" → contact page. Button 2 (outline): "See Our Work" → Recent Projects.</div><div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Conversion critical</span></div></div></li>
+          <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Add two CTA buttons below the headline</div><div class="task-desc">Button 1 (gold): "Get a Free Quote" → contact page. Button 2 (outline): "See Our Work" → Recent Projects page.</div><div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Conversion critical</span></div></div></li>
         </ul>
       </div>
     </div>
@@ -539,16 +540,16 @@
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Page Title (57 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Building Contractors Worcester &amp; Malvern | Court Property</div>
           <div class="copy-area"><span class="copy-label">Meta Description (155 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Experienced building contractors covering Worcester, Malvern and Worcestershire since 1997. Extensions, garages, loft conversions, landscaping and new build homes.</div>
         </div>
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1 &amp; Hero</span><span class="block-title">Hero section — full width image, headline, two buttons</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1 &amp; Hero</span><span class="block-title">Hero section — full width image, headline, two buttons</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="info-box">Replace the current "HOUSEBUILDERS &amp; DEVELOPERS" headline. H1 should be the only large heading visible before scrolling. Two CTA buttons sit beneath it.</div>
           <div class="copy-area"><span class="copy-label">H1</span><button class="copy-btn" onclick="cp(this)">Copy</button>Building Extensions &amp; Quality Homes Across Worcester &amp; Malvern</div>
           <div class="copy-area"><span class="copy-label">Subheading</span><button class="copy-btn" onclick="cp(this)">Copy</button>Established 1997. Over 250 homes built. Fixed price contracts. Quality guaranteed.</div>
@@ -567,24 +568,24 @@
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Stats bar — immediately below the hero</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Stats bar — immediately below the hero</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="info-box">A horizontal band of 4 stats in large type. No heading needed — the numbers speak for themselves. Full width, navy background, white text.</div>
           <div class="copy-area"><span class="copy-label">4 stats — display as large bold figures with small labels beneath each</span><button class="copy-btn" onclick="cp(this)">Copy</button>Established 1997  |  250+ Homes Built  |  50+ Extensions Completed  |  Worcestershire Based</div>
         </div>
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Short intro blurb — beneath the stats bar</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Short intro blurb — beneath the stats bar</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="info-box">3–4 sentences maximum. This is the only prose copy above the service cards. It introduces the business, covers the primary keyword, and sets up the service cards below. Do not expand it — length here works against you.</div>
           <div class="copy-area"><span class="copy-label">Intro blurb</span><button class="copy-btn" onclick="cp(this)">Copy</button>Court Property Developers is an established building contractor and property developer based in Worcestershire, working across Worcester, Malvern and the surrounding area since 1997. We build house extensions, garages, loft conversions and handle large scale landscaping projects for homeowners — alongside our own new build housing developments. Whatever your project, you get the same fixed price contracts, employed staff and developer-quality standards on every job.</div>
         </div>
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Layout</span><span class="block-title">Service cards grid — links to each service page</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Layout</span><span class="block-title">Service cards grid — links to each service page</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="info-box">6 cards in a 3x2 grid. Each card has: a photo, a service name as a heading, one sentence description, and a "Find out more" link to the relevant service page. This is the primary navigation block for homeowners — keep it visual and scannable.</div>
           <div class="copy-area"><span class="copy-label">Card 1</span><button class="copy-btn" onclick="cp(this)">Copy</button>House Extensions Worcester
 Single storey, double storey and rear extensions across Worcester and Worcestershire.</div>
@@ -652,16 +653,16 @@ New homes for sale across Worcestershire, built to developer quality standards s
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description — paste into Wix SEO settings</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description — paste into Wix SEO settings</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Page Title (55 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>House Extension Builders Worcester | Court Property</div>
           <div class="copy-area"><span class="copy-label">Meta Description (148 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Expert house extension builders serving Worcester since 1997. Single storey, double storey and rear extensions. Fixed price contracts. Call 01905 831778.</div>
         </div>
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline — use Heading 1 in Wix</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline — use Heading 1 in Wix</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="info-box">Must be the first heading on the page. Contains the primary keyword exactly.</div>
           <div class="copy-area"><span class="copy-label">H1</span><button class="copy-btn" onclick="cp(this)">Copy</button>House Extension Builders in Worcester</div>
           <div class="copy-area"><span class="copy-label">Subheading (slightly smaller than H1)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Single storey, double storey and rear extensions across Worcester and Worcestershire. Established 1997. Fixed price contracts.</div>
@@ -669,8 +670,8 @@ New homes for sale across Worcestershire, built to developer quality standards s
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="img-brief">
             <div class="img-brief-title">What to use</div>
             <ul>
@@ -685,15 +686,15 @@ New homes for sale across Worcestershire, built to developer quality standards s
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph — below the H1 or hero image</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph — below the H1 or hero image</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Opening paragraph</span><button class="copy-btn" onclick="cp(this)">Copy</button>Looking for experienced house extension builders in Worcester? Court Property Developers has been constructing homes and extensions across Worcester and Worcestershire since 1997 — bringing the same standards we apply to our own new build developments to every extension project we take on. Whether you are planning a single storey extension to open up your kitchen, a double storey addition to create new bedrooms, or a rear extension to connect your home to the garden, we deliver quality results at a fixed, agreed price with no unexpected costs.</div>
         </div>
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections — one H2 per extension type</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections — one H2 per extension type</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="info-box">Use Heading 2 in Wix for each title. Add the body copy below it and a photo alongside or beneath each section.</div>
 
           <div class="h2-label">Section 1</div>
@@ -798,22 +799,22 @@ A: We cover the full Worcester area including the city centre, Barbourne, St Joh
         <p>Targets Malvern and Malvern Hills specifically. Malvern has its own planning considerations — conservation areas, AONB proximity — which are genuine differentiators to mention. All copy unique to this page.</p>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Page Title (54 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>House Extension Builders Malvern | Court Property</div>
           <div class="copy-area"><span class="copy-label">Meta Description (152 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>House extensions built across Malvern, Great Malvern and the Malvern Hills area. Single and double storey specialists. Established 1997. Call 01905 831778.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">H1</span><button class="copy-btn" onclick="cp(this)">Copy</button>House Extension Builders in Malvern</div>
           <div class="copy-area"><span class="copy-label">Subheading</span><button class="copy-btn" onclick="cp(this)">Copy</button>Serving Great Malvern, Malvern Wells, West Malvern and the Malvern Hills area. Quality extensions from a builder established locally since 1997.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="img-brief">
             <div class="img-brief-title">What to use</div>
             <ul>
@@ -826,14 +827,14 @@ A: We cover the full Worcester area including the city centre, Barbourne, St Joh
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Opening paragraph</span><button class="copy-btn" onclick="cp(this)">Copy</button>Court Property Developers has been building house extensions across the Malvern area for over 25 years, working on properties throughout Great Malvern, Malvern Wells, West Malvern, Colwall, Mathon and the surrounding Malvern Hills villages. Malvern presents its own planning and construction considerations — from properties within or adjacent to the Malvern Hills Area of Outstanding Natural Beauty, to older Victorian and Edwardian houses in the town that require sympathetic materials and careful structural approaches. We understand this area well and have the experience to navigate its specific requirements.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections with Malvern context</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections with Malvern context</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="h2-label">Section 1</div>
           <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>Single Storey Extensions in Great Malvern and the Surrounding Villages</div>
           <div class="copy-area"><span class="copy-label">Body copy</span><button class="copy-btn" onclick="cp(this)">Copy</button>Single storey extensions are particularly popular across the Malvern area, where many properties — especially the Victorian and Edwardian terraces and semis in Great Malvern itself — have gardens large enough to extend into but haven't previously had the space improved. The most common project we carry out in Malvern is a rear single storey extension to create an open plan kitchen and living area, typically with glazed roof lanterns or bifold doors that make the most of the views that Malvern properties often enjoy.
@@ -923,22 +924,22 @@ A: Our base in Callow End places us approximately 3 miles from Great Malvern. We
         <p>New garages, garage extensions and detached outbuildings. The key differentiator here is masonry construction versus kit builds. All copy unique to this page.</p>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Page Title (55 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Garage Builders Worcester &amp; Malvern | Court Property</div>
           <div class="copy-area"><span class="copy-label">Meta Description (150 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>New garages, double garages and garage extensions built across Worcester, Malvern and Worcestershire. Fixed price. Established 1997. Call 01905 831778.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">H1</span><button class="copy-btn" onclick="cp(this)">Copy</button>Garage Builders in Worcester and Malvern</div>
           <div class="copy-area"><span class="copy-label">Subheading</span><button class="copy-btn" onclick="cp(this)">Copy</button>New single and double garages, garage extensions and detached outbuildings. Built to the same standards as our new build homes. Fixed price throughout Worcestershire.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="img-brief">
             <div class="img-brief-title">What to use</div>
             <ul>
@@ -951,14 +952,14 @@ A: Our base in Callow End places us approximately 3 miles from Great Malvern. We
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Opening paragraph</span><button class="copy-btn" onclick="cp(this)">Copy</button>A garage built by Court Property is not a flat-pack structure or a lightweight kit build — it is a fully masonry constructed garage built to the same standards we apply to the homes we develop and sell. As an established building contractor operating across Worcester, Malvern and Worcestershire since 1997, we bring full construction capability to garage projects: proper foundations, block or brick construction, tiled or felt roof, power and lighting, and full building regulation compliance where required. The result is a garage that will last as long as the house it stands beside.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="h2-label">Section 1</div>
           <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>New Single and Double Garages Worcester</div>
           <div class="copy-area"><span class="copy-label">Body copy</span><button class="copy-btn" onclick="cp(this)">Copy</button>Whether you need a single garage to protect one vehicle and provide useful storage, or a double garage to house two cars with a workshop space, we design and build garages to suit the site, the house, and your specific requirements. We can build in brick, block and render, or match the existing materials of your house — which is particularly important for properties in Malvern's conservation area or on estates with design guidelines.
@@ -1045,22 +1046,22 @@ A: Yes — matching materials is something we prioritise on every garage and out
         <p>High search volume and high job value. The key differentiator is Court Property's structural capability versus specialist loft conversion firms. All copy unique to this page.</p>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Page Title (55 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Loft Conversions Worcester &amp; Malvern | Court Property</div>
           <div class="copy-area"><span class="copy-label">Meta Description (149 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Loft conversions across Worcester, Malvern and Worcestershire. Dormer and roof light conversions by an established local builder. Call 01905 831778 today.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">H1</span><button class="copy-btn" onclick="cp(this)">Copy</button>Loft Conversions in Worcester and Malvern</div>
           <div class="copy-area"><span class="copy-label">Subheading</span><button class="copy-btn" onclick="cp(this)">Copy</button>Adding a bedroom, bathroom or office in the roof space of your Worcestershire home. Structural expertise from a builder with 25+ years of local construction experience.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="img-brief">
             <div class="img-brief-title">What to use</div>
             <ul>
@@ -1073,14 +1074,14 @@ A: Yes — matching materials is something we prioritise on every garage and out
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Opening paragraph</span><button class="copy-btn" onclick="cp(this)">Copy</button>A loft conversion is one of the most efficient ways to add a bedroom, bathroom or usable room to a home without losing any garden space. For many Worcester and Malvern homeowners — particularly those in three-bedroom semis or terraces who need an extra bedroom as families grow — converting the loft makes far more financial sense than moving to a larger property. Court Property carries out loft conversions across Worcestershire, bringing the same structural rigour and construction quality we apply to our new build development projects.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="h2-label">Section 1</div>
           <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>Dormer Loft Conversions Worcester</div>
           <div class="copy-area"><span class="copy-label">Body copy</span><button class="copy-btn" onclick="cp(this)">Copy</button>A dormer loft conversion — where a box-shaped extension is built out from the existing roof slope — creates the most usable floor area and headroom of any loft conversion type and is the most common project we carry out in Worcester. Rear dormers in particular are very popular, as they maximise space while remaining largely hidden from the street, which often simplifies the planning process.
@@ -1162,22 +1163,22 @@ A: Yes — we cover the full Worcestershire area for loft conversions including 
         <p>Large-scale external works — driveways, retaining walls, groundworks, terracing. Court Property's groundwork and building capability is the clear differentiator from garden landscapers. All copy unique to this page.</p>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Page Title (56 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Landscaping Contractors Worcester &amp; Malvern | Court Property</div>
           <div class="copy-area"><span class="copy-label">Meta Description (153 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Large-scale landscaping across Worcester, Malvern and Worcestershire. Driveways, retaining walls, terracing and external works. Established 1997. Call us today.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">H1</span><button class="copy-btn" onclick="cp(this)">Copy</button>Landscaping Contractors in Worcester and Malvern</div>
           <div class="copy-area"><span class="copy-label">Subheading</span><button class="copy-btn" onclick="cp(this)">Copy</button>Large-scale external works, driveways, retaining walls, terracing and groundworks across Worcestershire. Built by a proper building contractor, not a garden maintenance team.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="img-brief">
             <div class="img-brief-title">What to use</div>
             <ul>
@@ -1190,14 +1191,14 @@ A: Yes — we cover the full Worcestershire area for loft conversions including 
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="copy-area"><span class="copy-label">Opening paragraph</span><button class="copy-btn" onclick="cp(this)">Copy</button>Large scale landscaping — the kind that involves significant groundworks, retaining structures, drainage, terracing or major driveway works — requires the capability of a proper building contractor, not just a garden landscaping team. Court Property brings full groundwork and construction capability to external works projects across Worcester, Malvern and Worcestershire, using the same machinery, materials and employed staff that we use on our new build housing developments. If your project involves moving significant amounts of earth, building walls that need to retain it, or creating external structures that will last for decades, we have the experience to carry it out correctly.</div>
         </div>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service sub-sections</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="h2-label">Section 1</div>
           <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>Driveways and External Paving Worcester</div>
           <div class="copy-area"><span class="copy-label">Body copy</span><button class="copy-btn" onclick="cp(this)">Copy</button>A properly laid driveway starts well below the surface — with correctly prepared sub-base, adequate drainage, and edge restraints that will prevent the finished surface from spreading or sinking over time. This groundwork phase is where shortcuts are most commonly taken and where most driveway failures begin. Because Court Property carries out its own groundworks on housing developments, we approach driveway projects with the same rigour we would apply to a road base on a new build site.
@@ -1287,8 +1288,8 @@ A: Yes — and this is often the most cost-effective approach. When our machiner
         <p>These three articles target high-volume "how much does" and "do I need" searches — the questions people type before they start calling builders. They build trust and rank for long-tail keywords not covered by the service pages.</p>
       </div>
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Blog 1</span><span class="block-title">How Much Does a House Extension Cost in Worcester in 2025?</span><span class="block-chevron open">▼</span></div>
-        <div class="block-body open">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Blog 1</span><span class="block-title">How Much Does a House Extension Cost in Worcester in 2025?</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
           <div class="info-box">Target keyword: "house extension cost Worcester" — 600–800 words. This will likely become the most-visited page on the site once it ranks.</div>
           <div class="copy-area"><span class="copy-label">Blog title (H1)</span><button class="copy-btn" onclick="cp(this)">Copy</button>How Much Does a House Extension Cost in Worcester in 2025?</div>
           <div class="copy-area"><span class="copy-label">Content brief — write to these points</span><button class="copy-btn" onclick="cp(this)">Copy</button>Opening: acknowledge this is the first question every homeowner asks and that costs vary — but give real numbers, not vague ranges.
@@ -1369,9 +1370,9 @@ Closing: free consultation — we'll advise honestly based on your specific prop
       <div class="phase-header" onclick="togglePhase(this)">
         <div class="phase-num num-coral">1</div>
         <div class="phase-title-wrap"><div class="phase-title">Setup &amp; claim the profile</div><div class="phase-meta">business.google.com — 20 minutes, verification by postcard takes 5–14 days</div></div>
-        <div class="phase-chevron open">▼</div>
+        <div class="phase-chevron">▼</div>
       </div>
-      <div class="phase-body open">
+      <div class="phase-body">
         <ul class="task-list">
           <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Go to business.google.com and search "Court Property"</div><div class="task-desc">If the listing exists, click "Claim this business". If not, click "Add your business". Google often auto-generates listings from web data — check first.</div><div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">Do this first</span></div></div></li>
           <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Set primary category to "General Contractor"</div><div class="task-desc">Secondary categories to add: Home Builder, Construction Company, Garage Builder, Landscaper</div><div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Ranking signal</span></div></div></li>
@@ -1458,9 +1459,9 @@ Closing: free consultation — we'll advise honestly based on your specific prop
       <div class="phase-header" onclick="togglePhase(this)">
         <div class="phase-num num-blue">1</div>
         <div class="phase-title-wrap"><div class="phase-title">Facebook page — profile update</div><div class="phase-meta">The existing page needs updating to reflect new services</div></div>
-        <div class="phase-chevron open">▼</div>
+        <div class="phase-chevron">▼</div>
       </div>
-      <div class="phase-body open">
+      <div class="phase-body">
         <ul class="task-list">
           <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Update Facebook page category</div><div class="task-desc">Settings → Page Info → Category. Set to "General Contractor" (primary), add "Home Improvement" as secondary.</div><div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div></div></li>
           <li class="task-item">
@@ -1570,11 +1571,47 @@ Closing: free consultation — we'll advise honestly based on your specific prop
 </div>
 <script>
   const SECTIONS = ['Website — Technical','Website — Visual','Content & SEO','Google Business','Facebook & Social'];
+  const STORAGE_KEY = 'courtproperty_guide_progress';
   let totalTasks = 0;
   const circ = 138.23;
 
+  // ── Persistence helpers ──────────────────────────────────────────
+  function saveProgress() {
+    const checked = {};
+    document.querySelectorAll('.task-check').forEach((el, i) => {
+      if (el.classList.contains('checked')) checked[i] = true;
+    });
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(checked)); } catch(e) {}
+  }
+
+  function loadProgress() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      document.querySelectorAll('.task-check').forEach((el, i) => {
+        if (saved[i]) {
+          el.classList.add('checked');
+          const t = el.parentElement.querySelector('.task-title');
+          if (t) t.classList.add('done');
+        }
+      });
+    } catch(e) {}
+  }
+
+  function resetProgress() {
+    if (!confirm('Reset all progress? This cannot be undone.')) return;
+    try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    document.querySelectorAll('.task-check').forEach(el => {
+      el.classList.remove('checked');
+      const t = el.parentElement.querySelector('.task-title');
+      if (t) t.classList.remove('done');
+    });
+    updateProgress();
+  }
+
+  // ── Core functions ───────────────────────────────────────────────
   function init() {
     totalTasks = document.querySelectorAll('.task-check').length;
+    loadProgress();
     updateProgress();
   }
 
@@ -1584,13 +1621,16 @@ Closing: free consultation — we'll advise honestly based on your specific prop
     document.getElementById('prog-circle').style.strokeDashoffset = circ - (pct / 100) * circ;
     document.getElementById('prog-pct').textContent = pct + '%';
     document.getElementById('prog-done').textContent = done + ' of ' + totalTasks + ' tasks completed';
-    document.getElementById('prog-left').textContent = done === totalTasks && totalTasks > 0 ? 'All tasks complete — great work!' : (totalTasks - done) + ' tasks remaining across all sections';
+    document.getElementById('prog-left').textContent = done === totalTasks && totalTasks > 0
+      ? 'All tasks complete — great work!'
+      : (totalTasks - done) + ' tasks remaining · progress saved automatically';
   }
 
   function toggleTask(el) {
     el.classList.toggle('checked');
     const t = el.parentElement.querySelector('.task-title');
     if (t) t.classList.toggle('done', el.classList.contains('checked'));
+    saveProgress();
     updateProgress();
   }
 
@@ -1618,6 +1658,7 @@ Closing: free consultation — we'll advise honestly based on your specific prop
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  // ── Copy helpers ─────────────────────────────────────────────────
   function copyText(btn, text) {
     const decoded = text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
     navigator.clipboard.writeText(decoded).then(() => flash(btn)).catch(() => { fallback(decoded); flash(btn); });
