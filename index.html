@@ -364,11 +364,12 @@
     <div class="phase-block">
       <div class="phase-header" onclick="togglePhase(this)">
         <div class="phase-num num-amber">4</div>
-        <div class="phase-title-wrap"><div class="phase-title">Target keywords — use these throughout the new pages</div><div class="phase-meta">Full page copy using all these keywords is in the Content &amp; SEO tab</div></div>
+        <div class="phase-title-wrap"><div class="phase-title">Keyword reference — strategy overview</div><div class="phase-meta">For reference only — these are already placed in the page copy in the Content &amp; SEO tab</div></div>
         <div class="phase-chevron">▼</div>
       </div>
       <div class="phase-body">
-        <h4 class="sub">🔴 High Priority — H1s and opening paragraphs</h4>
+        <div class="info-box">No action needed here. This is a reference showing the keyword strategy. Every keyword below is already woven into the correct H1, H2 or FAQ on the relevant page in the Content &amp; SEO tab. Use this to explain the SEO strategy to the client or to check coverage at a glance.</div>
+        <h4 class="sub">🔴 High Priority — placed in H1s and opening paragraphs</h4>
         <div class="kw-grid">
           <div class="kw-card"><div class="kw-term">extension builders Worcester</div><div class="kw-intent">High intent, local</div><span class="kw-priority kw-high">Must have</span></div>
           <div class="kw-card"><div class="kw-term">house extension Malvern</div><div class="kw-intent">Target area, lower competition</div><span class="kw-priority kw-high">Must have</span></div>
@@ -511,21 +512,117 @@
   <!-- ===================================================== -->
   <div class="section" id="section-2">
     <div class="section-title">Content &amp; SEO</div>
-    <div class="section-subtitle">Complete copy for all 5 new service pages — ready to paste directly into Wix. Select a page below.</div>
+    <div class="section-subtitle">Complete copy for the homepage and all 5 new service pages — ready to paste directly into Wix. Select a page below.</div>
 
-    <div class="warn-box">No copy is duplicated across pages. Every H1, H2, opening paragraph, trust section, FAQ and CTA is uniquely written for each page. Copying identical blocks across multiple pages damages Google rankings — each page must be genuinely distinct.</div>
+    <div class="warn-box"><strong>Duplicate content:</strong> No copy is duplicated across pages. Every H1, H2, opening paragraph, trust section, FAQ and CTA is uniquely written for each page. Copying identical blocks across multiple pages damages Google rankings — each page must be genuinely distinct.</div>
+
+    <div class="info-box" style="margin-top:10px"><strong>On AI-generated copy:</strong> Google does not penalise AI-written content — it penalises thin, generic or duplicate content regardless of how it was written. The copy in this guide is specific to Court Property, references real local detail, and is unique across every page. However, before publishing each page the client should personalise it by: dropping in a real project example ("we recently completed a rear extension in Bransford for a family who..."), adding one or two sentences in their own voice, and ensuring photos are real completed jobs with genuine captions. This makes the content undeniably authentic and impossible for competitors to replicate.</div>
 
     <div class="sub-nav" id="content-subnav">
-      <button class="sub-btn active" onclick="goContentPage(0)">Extensions Worcester</button>
-      <button class="sub-btn" onclick="goContentPage(1)">Extensions Malvern</button>
-      <button class="sub-btn" onclick="goContentPage(2)">Garage Builders</button>
-      <button class="sub-btn" onclick="goContentPage(3)">Loft Conversions</button>
-      <button class="sub-btn" onclick="goContentPage(4)">Landscaping</button>
-      <button class="sub-btn" onclick="goContentPage(5)">Blog Posts</button>
+      <button class="sub-btn active" onclick="goContentPage(0)">Homepage</button>
+      <button class="sub-btn" onclick="goContentPage(1)">Extensions Worcester</button>
+      <button class="sub-btn" onclick="goContentPage(2)">Extensions Malvern</button>
+      <button class="sub-btn" onclick="goContentPage(3)">Garage Builders</button>
+      <button class="sub-btn" onclick="goContentPage(4)">Loft Conversions</button>
+      <button class="sub-btn" onclick="goContentPage(5)">Landscaping</button>
+      <button class="sub-btn" onclick="goContentPage(6)">Blog Posts</button>
+    </div>
+
+    <!-- PAGE 0: HOMEPAGE -->
+    <div class="content-page visible" id="cp-0">
+      <div class="page-intro">
+        <h3>Homepage</h3>
+        <div class="pi-meta">
+          <span class="pi-pill pill-navy">URL: courtproperty.co.uk (homepage)</span>
+          <span class="pi-pill pill-gold">Primary keyword: building contractors Worcester</span>
+          <span class="pi-pill pill-green">The first page every visitor sees</span>
+        </div>
+        <p>The homepage is not a service page — it introduces the full business and directs visitors to the right service. Copy must be broad enough to represent all services while immediately signalling what Court Property now does for homeowners. The existing homepage is new-build focused — this rewrite adds extensions and services prominently without removing the developer identity.</p>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description — paste into Wix SEO settings</span><span class="block-chevron open">▼</span></div>
+        <div class="block-body open">
+          <div class="copy-area"><span class="copy-label">Page Title (57 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Building Contractors Worcester &amp; Malvern | Court Property</div>
+          <div class="copy-area"><span class="copy-label">Meta Description (155 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Experienced building contractors covering Worcester, Malvern and Worcestershire since 1997. Extensions, garages, loft conversions, landscaping and new build homes.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Hero headline — the first thing visitors read</span><span class="block-chevron open">▼</span></div>
+        <div class="block-body open">
+          <div class="info-box">Replace the current "HOUSEBUILDERS &amp; DEVELOPERS" headline. This new H1 leads with extensions (the new commercial priority) without dropping the new homes identity.</div>
+          <div class="copy-area"><span class="copy-label">H1</span><button class="copy-btn" onclick="cp(this)">Copy</button>Building Extensions &amp; Quality Homes Across Worcester &amp; Malvern</div>
+          <div class="copy-area"><span class="copy-label">Subheading (beneath H1)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Established 1997. Over 250 homes built. Fixed price contracts. Quality guaranteed.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Hero image brief</span><span class="block-chevron open">▼</span></div>
+        <div class="block-body open">
+          <div class="img-brief">
+            <div class="img-brief-title">What to use</div>
+            <ul>
+              <li>The strongest single photo in the portfolio — either a completed extension or a completed new build, showing quality and scale</li>
+              <li>Wide landscape, minimum 1600px, sharp focus, good daylight</li>
+              <li>Must be different from any image used on a service page hero</li>
+              <li>The Malvern Hills or a recognisable Worcestershire backdrop in the distance would be ideal</li>
+              <li>Alt text: <strong>Court Property Developers — building contractors Worcester and Malvern</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Opening paragraph — immediately below the hero</span><span class="block-chevron open">▼</span></div>
+        <div class="block-body open">
+          <div class="copy-area"><span class="copy-label">Opening paragraph</span><button class="copy-btn" onclick="cp(this)">Copy</button>Court Property Developers is an established building contractor and property developer based in Worcestershire, operating since 1997. We build house extensions — single storey, double storey, rear extensions and kitchen extensions — as well as garages, loft conversions and large scale landscaping projects across Worcester, Malvern and the surrounding area. We also develop and build new homes for sale across Worcestershire, bringing the same high construction standards to every project regardless of scale.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H2 Sections</span><span class="block-title">Service overview sections — introduce each area of work</span><span class="block-chevron open">▼</span></div>
+        <div class="block-body open">
+          <div class="info-box">These sections sit below the stats bar and service cards grid. Each is a short introduction that links through to the relevant service page. They are not full page copy — they are signposts.</div>
+
+          <div class="h2-label">Section 1 — House Extensions</div>
+          <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>House Extensions Across Worcester and Malvern</div>
+          <div class="copy-area"><span class="copy-label">Body copy (2–3 sentences, links to service page)</span><button class="copy-btn" onclick="cp(this)">Copy</button>From single storey kitchen extensions to substantial double storey additions, we design and build house extensions across Worcester, Malvern and the wider Worcestershire area. Fixed price contracts, our own employed staff, and over 25 years of local building experience mean you get a quality result without the uncertainty that comes with less established contractors.</div>
+
+          <div class="h2-label">Section 2 — Garages</div>
+          <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>Garage Building and Outbuildings</div>
+          <div class="copy-area"><span class="copy-label">Body copy</span><button class="copy-btn" onclick="cp(this)">Copy</button>We build new single and double garages, garage extensions and detached outbuildings across Worcestershire — proper masonry construction, not kit builds. The same materials standards and fixed price approach we apply to every project.</div>
+
+          <div class="h2-label">Section 3 — New Homes</div>
+          <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>New Build Homes Across Worcestershire</div>
+          <div class="copy-area"><span class="copy-label">Body copy</span><button class="copy-btn" onclick="cp(this)">Copy</button>As a developer, we buy land, design and build new homes for sale across Worcestershire. Our homes are individually designed for each site, built to full NHBC construction standards, and currently include developments in Bromyard and Worcester. See our current and recent developments for more details.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">About section — mid-page credibility block</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">This replaces or substantially rewrites the existing About section on the homepage. Positioned below the services grid.</div>
+          <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>About Court Property Developers</div>
+          <div class="copy-area"><span class="copy-label">Body copy</span><button class="copy-btn" onclick="cp(this)">Copy</button>Court Property Developers Ltd has been building homes and carrying out contract building work across Worcestershire since 1997. In that time we have completed over 60 housing developments, constructed more than 250 homes, and delivered over 50 contract projects for homeowners, landlords, businesses and housing associations.
+
+Our contract building work ranges from single storey extensions for homeowners to converting buildings into multiple apartments for landlords — and everything in between. We are experienced in dealing with architects, structural engineers, planning officers and building inspectors, and we manage these relationships on your behalf as a standard part of our service.
+
+We employ our own core staff and work with a network of specialist subcontractors we have used and trusted for many years. We are based in Callow End, near Worcester, and cover Worcester, Malvern and the wider Worcestershire area.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">CTA</span><span class="block-title">Homepage call to action</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="copy-area"><span class="copy-label">CTA Heading (H2)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Start a Conversation About Your Project</div>
+          <div class="copy-area"><span class="copy-label">CTA Body</span><button class="copy-btn" onclick="cp(this)">Copy</button>Whether you are planning a house extension, a new garage, a loft conversion or a larger building project, we offer a free initial consultation and no-obligation quotation across Worcester, Malvern and Worcestershire. Call Mark or Roy on 01905 831778 or send us a message and we will be in touch within one working day.</div>
+        </div>
+      </div>
     </div>
 
     <!-- PAGE 1: EXTENSIONS WORCESTER -->
-    <div class="content-page visible" id="cp-0">
+    <div class="content-page" id="cp-1">
       <div class="page-intro">
         <h3>House Extensions Worcester</h3>
         <div class="pi-meta">
@@ -672,7 +769,7 @@ A: We cover the full Worcester area including the city centre, Barbourne, St Joh
     </div>
 
     <!-- PAGE 2: EXTENSIONS MALVERN -->
-    <div class="content-page" id="cp-1">
+    <div class="content-page" id="cp-2">
       <div class="page-intro">
         <h3>House Extensions Malvern</h3>
         <div class="pi-meta">
@@ -797,7 +894,7 @@ A: Our base in Callow End places us approximately 3 miles from Great Malvern. We
     </div>
 
     <!-- PAGE 3: GARAGE BUILDERS -->
-    <div class="content-page" id="cp-2">
+    <div class="content-page" id="cp-3">
       <div class="page-intro">
         <h3>Garage Builders Worcester</h3>
         <div class="pi-meta">
@@ -919,7 +1016,7 @@ A: Yes — matching materials is something we prioritise on every garage and out
     </div>
 
     <!-- PAGE 4: LOFT CONVERSIONS -->
-    <div class="content-page" id="cp-3">
+    <div class="content-page" id="cp-4">
       <div class="page-intro">
         <h3>Loft Conversions Worcester</h3>
         <div class="pi-meta">
@@ -1036,7 +1133,7 @@ A: Yes — we cover the full Worcestershire area for loft conversions including 
     </div>
 
     <!-- PAGE 5: LANDSCAPING -->
-    <div class="content-page" id="cp-4">
+    <div class="content-page" id="cp-5">
       <div class="page-intro">
         <h3>Landscaping Worcestershire</h3>
         <div class="pi-meta">
@@ -1161,7 +1258,7 @@ A: Yes — and this is often the most cost-effective approach. When our machiner
     </div>
 
     <!-- BLOG POSTS -->
-    <div class="content-page" id="cp-5">
+    <div class="content-page" id="cp-6">
       <div class="page-intro">
         <h3>Blog Posts — 3 Priority Articles</h3>
         <div class="pi-meta">
