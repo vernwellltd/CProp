@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Court Property — Digital Growth Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --primary: #1C3B2E;
+    --primary-light: #2a5240;
+    --accent: #C8A96E;
+    --stone: #F5F1EA;
+    --text: #2C2C2A;
+    --text-muted: #6b6b68;
+    --text-hint: #9b9b98;
+    --border: rgba(44,44,42,0.12);
+    --border-med: rgba(44,44,42,0.22);
+    --bg-card: #ffffff;
+    --bg-secondary: #f8f6f2;
+    --bg-tertiary: #f0ede8;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  }
+
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--stone);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* LAYOUT */
+  .page-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  /* HEADER */
+  .guide-header {
+    background: var(--primary);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem 2rem 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  .guide-header::before {
+    content: '';
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+    pointer-events: none;
+  }
+  .guide-header::after {
+    content: '';
+    position: absolute;
+    right: 60px; bottom: -80px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(200,169,110,0.08);
+    pointer-events: none;
+  }
+  .header-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .guide-header h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .guide-header .subtitle {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 1.5rem;
+  }
+  .header-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 1.5rem;
+  }
+  .tag {
+    font-size: 11px; font-weight: 500;
+    padding: 4px 12px; border-radius: 20px;
+    letter-spacing: 0.02em;
+  }
+  .tag-green { background: rgba(29,158,117,0.2); color: #5DCAA5; border: 1px solid rgba(93,202,165,0.2); }
+  .tag-amber { background: rgba(200,169,110,0.2); color: var(--accent); border: 1px solid rgba(200,169,110,0.25); }
+  .tag-blue  { background: rgba(55,138,221,0.15); color: #85B7EB; border: 1px solid rgba(133,183,235,0.2); }
+
+  /* PROGRESS */
+  .progress-bar-row {
+    display: flex; align-items: center; gap: 6px;
+  }
+  .pb-steps { display: flex; gap: 4px; flex: 1; }
+  .pb-step {
+    height: 3px; flex: 1; border-radius: 2px;
+    background: rgba(255,255,255,0.12);
+    cursor: pointer; transition: background 0.2s;
+  }
+  .pb-step.active { background: #5DCAA5; }
+  .pb-step:hover { background: rgba(93,202,165,0.5); }
+  .pb-label { font-size: 11px; color: rgba(255,255,255,0.4); white-space: nowrap; min-width: 120px; text-align: right; }
+
+  /* PROGRESS SUMMARY */
+  .progress-summary {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .prog-ring { position: relative; width: 56px; height: 56px; flex-shrink: 0; }
+  .prog-ring svg { transform: rotate(-90deg); display: block; }
+  .prog-ring .prog-text {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 600; color: var(--primary);
+  }
+  .prog-info { flex: 1; }
+  .prog-info h4 { font-size: 14px; font-weight: 500; }
+  .prog-info p { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+  /* NAV */
+  .section-nav {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .nav-btn {
+    font-size: 13px; font-weight: 500;
+    padding: 8px 16px; border-radius: 20px;
+    border: 0.5px solid var(--border-med);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+    box-shadow: var(--shadow-sm);
+  }
+  .nav-btn:hover { background: var(--bg-secondary); color: var(--text); }
+  .nav-btn.active {
+    background: var(--primary);
+    color: #5DCAA5;
+    border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(28,59,46,0.25);
+  }
+
+  /* SECTIONS */
+  .section { display: none; }
+  .section.visible { display: block; }
+
+  .section-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 22px; font-weight: 400;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .section-subtitle {
+    font-size: 13px; color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  /* PHASE BLOCKS */
+  .phase-block {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .phase-header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 0.5px solid var(--border);
+    transition: background 0.15s;
+  }
+  .phase-header:hover { background: var(--bg-tertiary); }
+  .phase-num {
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 600; flex-shrink: 0;
+  }
+  .num-green  { background: #E1F5EE; color: #0F6E56; }
+  .num-amber  { background: #FAEEDA; color: #854F0B; }
+  .num-blue   { background: #E6F1FB; color: #185FA5; }
+  .num-coral  { background: #FAECE7; color: #993C1D; }
+  .num-purple { background: #EEEDFE; color: #3C3489; }
+  .phase-title-wrap { flex: 1; }
+  .phase-title { font-size: 14px; font-weight: 500; }
+  .phase-meta  { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .phase-chevron { font-size: 11px; color: var(--text-hint); transition: transform 0.2s; }
+  .phase-chevron.open { transform: rotate(180deg); }
+  .phase-body { padding: 1.25rem; display: none; }
+  .phase-body.open { display: block; }
+
+  /* TASK LIST */
+  .task-list { list-style: none; }
+  .task-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .task-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .task-check {
+    width: 20px; height: 20px; border-radius: 5px;
+    border: 1.5px solid var(--border-med);
+    background: var(--bg-card);
+    flex-shrink: 0; cursor: pointer; margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  .task-check:hover { border-color: var(--primary); }
+  .task-check.checked { background: var(--primary); border-color: var(--primary); }
+  .task-check.checked::after {
+    content: '';
+    width: 5px; height: 9px;
+    border: 2px solid #5DCAA5;
+    border-top: none; border-left: none;
+    transform: rotate(45deg) translateY(-1px);
+  }
+  .task-content { flex: 1; min-width: 0; }
+  .task-title { font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .task-title.done { text-decoration: line-through; color: var(--text-hint); }
+  .task-desc { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.55; }
+  .task-badges { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+  .badge {
+    font-size: 10px; font-weight: 500;
+    padding: 2px 8px; border-radius: 10px;
+    letter-spacing: 0.02em;
+  }
+  .badge-free     { background: #E1F5EE; color: #0F6E56; }
+  .badge-quick    { background: #FAEEDA; color: #854F0B; }
+  .badge-technical{ background: #E6F1FB; color: #185FA5; }
+  .badge-content  { background: #EEEDFE; color: #3C3489; }
+  .badge-high     { background: #FAECE7; color: #993C1D; }
+
+  /* COPY BLOCKS */
+  .copy-block {
+    background: var(--bg-secondary);
+    border: 0.5px solid var(--border);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 12px 14px;
+    margin: 10px 0;
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--text);
+    position: relative;
+  }
+  .copy-label {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--primary); margin-bottom: 6px;
+  }
+  .copy-btn {
+    position: absolute; top: 10px; right: 10px;
+    font-size: 10px; padding: 4px 10px;
+    border: 0.5px solid var(--border-med);
+    border-radius: 5px;
+    background: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer; font-family: inherit;
+    transition: all 0.15s;
+  }
+  .copy-btn:hover { background: var(--primary); color: #5DCAA5; border-color: var(--primary); }
+  .copy-btn.copied { background: #E1F5EE; color: #0F6E56; border-color: #9FE1CB; }
+
+  /* KEYWORDS */
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 8px; margin: 10px 0;
+  }
+  .kw-card {
+    background: var(--bg-secondary);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 10px 12px;
+  }
+  .kw-term { font-size: 13px; font-weight: 500; }
+  .kw-intent { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .kw-priority { display: inline-block; margin-top: 5px; font-size: 10px; padding: 2px 7px; border-radius: 8px; font-weight: 500; }
+  .kw-high { background: #FAECE7; color: #993C1D; }
+  .kw-med  { background: #FAEEDA; color: #854F0B; }
+  .kw-low  { background: #E1F5EE; color: #0F6E56; }
+
+  /* COLORS */
+  .color-swatches { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+  .swatch {
+    border-radius: var(--radius-md);
+    padding: 12px 16px; min-width: 130px;
+  }
+  .swatch-hex { font-weight: 600; font-size: 13px; }
+  .swatch-name { font-size: 11px; margin-top: 2px; opacity: 0.7; }
+  .swatch-use  { font-size: 11px; opacity: 0.65; }
+
+  /* FONT PREVIEW */
+  .font-preview {
+    background: var(--bg-secondary);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px; margin: 8px 0;
+  }
+  .font-preview-name { font-size: 22px; margin-bottom: 6px; }
+  .font-preview-desc { font-size: 12px; color: var(--text-muted); }
+
+  /* SITE TREE */
+  .site-tree {
+    font-size: 13px; line-height: 2.2;
+    background: var(--bg-secondary);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    font-family: 'Courier New', monospace;
+    color: var(--text);
+  }
+
+  /* INFO BOX */
+  .info-box {
+    background: #EBF4FF;
+    border: 0.5px solid #B5D4F4;
+    border-radius: var(--radius-md);
+    padding: 10px 14px; margin: 10px 0;
+    font-size: 12px; color: #185FA5; line-height: 1.6;
+  }
+
+  /* SUB HEADINGS */
+  h4.sub {
+    font-size: 11px; font-weight: 600;
+    margin: 16px 0 8px;
+    color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+
+  /* FOOTER */
+  .guide-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 0.5px solid var(--border);
+    font-size: 12px;
+    color: var(--text-hint);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .page-wrapper { padding: 1rem 1rem 3rem; }
+    .guide-header h1 { font-size: 22px; }
+    .section-nav { gap: 5px; }
+    .nav-btn { font-size: 12px; padding: 7px 12px; }
+    .kw-grid { grid-template-columns: 1fr 1fr; }
+    .color-swatches { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <div class="guide-header">
+    <div class="header-eyebrow">Consultant Delivery Guide</div>
+    <h1>Court Property<br>Digital Growth Guide</h1>
+    <p class="subtitle">SEO · Google Business Profile · Social Media — Worcester &amp; Malvern</p>
+    <div class="header-tags">
+      <span class="tag tag-green">Extensions &amp; Garages</span>
+      <span class="tag tag-amber">Worcester &amp; Malvern</span>
+      <span class="tag tag-blue">Organic Growth Focus</span>
+    </div>
+    <div class="progress-bar-row">
+      <div class="pb-steps" id="pb-steps">
+        <div class="pb-step active" onclick="goSection(0)" title="Website — Technical"></div>
+        <div class="pb-step" onclick="goSection(1)" title="Website — Visual"></div>
+        <div class="pb-step" onclick="goSection(2)" title="Content &amp; SEO"></div>
+        <div class="pb-step" onclick="goSection(3)" title="Google Business"></div>
+        <div class="pb-step" onclick="goSection(4)" title="Facebook &amp; Social"></div>
+      </div>
+      <span class="pb-label" id="pb-label">Website — Technical</span>
+    </div>
+  </div>
+
+  <!-- PROGRESS SUMMARY -->
+  <div class="progress-summary">
+    <div class="prog-ring">
+      <svg width="56" height="56" viewBox="0 0 56 56">
+        <circle cx="28" cy="28" r="22" fill="none" stroke="#e8e5df" stroke-width="4"/>
+        <circle id="prog-circle" cx="28" cy="28" r="22" fill="none" stroke="#1C3B2E" stroke-width="4"
+          stroke-dasharray="138.23" stroke-dashoffset="138.23" stroke-linecap="round"/>
+      </svg>
+      <div class="prog-text" id="prog-pct">0%</div>
+    </div>
+    <div class="prog-info">
+      <h4 id="prog-done">0 tasks completed</h4>
+      <p id="prog-left">Check off tasks as you work through the guide</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="section-nav">
+    <button class="nav-btn active" onclick="goSection(0)">Website — Technical</button>
+    <button class="nav-btn" onclick="goSection(1)">Website — Visual</button>
+    <button class="nav-btn" onclick="goSection(2)">Content &amp; SEO</button>
+    <button class="nav-btn" onclick="goSection(3)">Google Business</button>
+    <button class="nav-btn" onclick="goSection(4)">Facebook &amp; Social</button>
+  </div>
+
+  <!-- ===== SECTION 0: TECHNICAL SEO ===== -->
+  <div class="section visible" id="section-0">
+    <div class="section-title">Website — Technical SEO</div>
+    <div class="section-subtitle">Foundation fixes in Wix that help Google index and rank the site correctly. Do these before any content work.</div>
+
+    <!-- Phase 1 -->
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-coral">1</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Page titles &amp; meta descriptions</div>
+          <div class="phase-meta">The single biggest quick-win — currently nearly invisible to Google</div>
+        </div>
+        <div class="phase-chevron open">▼</div>
+      </div>
+      <div class="phase-body open">
+        <div class="info-box">In Wix: go to each page → click the three dots → SEO Settings → fill in "Page Title" and "Meta Description"</div>
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Fix the homepage title</div>
+              <div class="task-desc">Change from "HOME | Court Property" to the new title below</div>
+              <div class="copy-block">
+                <div class="copy-label">New Page Title (max 60 chars)</div>
+                <button class="copy-btn" onclick="copyText(this,'Building Contractors Worcester &amp; Malvern | Court Property')">Copy</button>
+                Building Contractors Worcester &amp; Malvern | Court Property
+              </div>
+              <div class="copy-block">
+                <div class="copy-label">New Meta Description (max 155 chars)</div>
+                <button class="copy-btn" onclick="copyText(this,'Experienced building contractors covering Worcester, Malvern and Worcestershire. Extensions, garages, landscaping and loft conversions. Established 1997.')">Copy</button>
+                Experienced building contractors covering Worcester, Malvern and Worcestershire. Extensions, garages, landscaping and loft conversions. Established 1997.
+              </div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">15 mins</span><span class="badge badge-high">High impact</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Fix the Contract Building page title</div>
+              <div class="task-desc">Rename and update SEO title to target extension searches</div>
+              <div class="copy-block">
+                <div class="copy-label">New Page Title</div>
+                <button class="copy-btn" onclick="copyText(this,'Home Extensions &amp; Building Work Worcester | Court Property')">Copy</button>
+                Home Extensions &amp; Building Work Worcester | Court Property
+              </div>
+              <div class="copy-block">
+                <div class="copy-label">Meta Description</div>
+                <button class="copy-btn" onclick="copyText(this,'Single storey, double storey and kitchen extensions built across Worcester and Malvern. Garages, loft conversions and landscaping. Fixed price, quality guaranteed.')">Copy</button>
+                Single storey, double storey and kitchen extensions built across Worcester and Malvern. Garages, loft conversions and landscaping. Fixed price, quality guaranteed.
+              </div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">15 mins</span><span class="badge badge-high">High impact</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-blue">2</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">New service pages to create</div>
+          <div class="phase-meta">Google can only rank pages that exist — these are the core missing pages</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <div class="info-box">In Wix: Pages &amp; Menu → Add Page → Blank Page. Set the URL slug exactly as shown below.</div>
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Create: House Extensions Worcester page</div>
+              <div class="task-desc">URL slug: <strong>/house-extensions-worcester</strong> — Covers single storey, double storey, rear, side, kitchen extensions. This is the highest traffic target page.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Highest priority</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Create: House Extensions Malvern page</div>
+              <div class="task-desc">URL slug: <strong>/house-extensions-malvern</strong> — Duplicate structure of Worcester page but localised to Malvern, Great Malvern, Malvern Hills area.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Highest priority</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Create: Garage Builders Worcester page</div>
+              <div class="task-desc">URL slug: <strong>/garage-builders-worcester</strong> — Cover detached garages, double garages, garage extensions. Include Malvern in the copy.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Create: Loft Conversions Worcester page</div>
+              <div class="task-desc">URL slug: <strong>/loft-conversions-worcester</strong> — Even if occasional work, this is a high-search term. A page costs nothing and may generate calls.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Create: Landscaping Worcestershire page</div>
+              <div class="task-desc">URL slug: <strong>/landscaping-worcestershire</strong> — Large landscaping, garden projects, external works.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+        </ul>
+        <div class="info-box" style="margin-top:10px">Add all new pages to the site navigation under a new dropdown menu called "Our Services"</div>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-green">3</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Site structure &amp; navigation</div>
+          <div class="phase-meta">Restructure the nav so Google and visitors can find service pages</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <div class="site-tree">
+          Home<br>
+          ├── Our Services ▾<br>
+          │&nbsp;&nbsp;&nbsp;&nbsp;├── House Extensions (Worcester)<br>
+          │&nbsp;&nbsp;&nbsp;&nbsp;├── House Extensions (Malvern)<br>
+          │&nbsp;&nbsp;&nbsp;&nbsp;├── Garage Building<br>
+          │&nbsp;&nbsp;&nbsp;&nbsp;├── Loft Conversions<br>
+          │&nbsp;&nbsp;&nbsp;&nbsp;└── Landscaping<br>
+          ├── New Homes ▾<br>
+          │&nbsp;&nbsp;&nbsp;&nbsp;├── Bromyard Development<br>
+          │&nbsp;&nbsp;&nbsp;&nbsp;└── Worcester Development<br>
+          ├── Recent Projects<br>
+          ├── About Us<br>
+          └── Contact
+        </div>
+        <ul class="task-list" style="margin-top:14px">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add phone number to the header of every page</div>
+              <div class="task-desc">Currently only in the footer. Add "01905 831778" prominently to the header area — this is what homeowners look for first and Google uses it as a trust signal.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">Quick win</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add a "Get a Free Quote" button to the header</div>
+              <div class="task-desc">Link to the contact page or a simple enquiry form. Every service page visitor needs a clear next step.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">High impact</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Connect Google Search Console (free)</div>
+              <div class="task-desc">Go to search.google.com/search-console → Add property → Use the Wix verification method (Wix: Marketing &amp; SEO → Google Search Console). Lets Google index new pages faster and shows what search terms bring visitors.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-technical">Technical</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Submit sitemap to Google</div>
+              <div class="task-desc">Wix auto-generates a sitemap at courtproperty.co.uk/sitemap.xml — Once Search Console is connected, submit this URL in Search Console → Sitemaps. Tells Google about all new pages immediately.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-technical">Technical</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-amber">4</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Target keywords — the terms to rank for</div>
+          <div class="phase-meta">Use these exact phrases in page titles, headings and body text</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <h4 class="sub">🔴 High Priority — Homepage &amp; main service pages</h4>
+        <div class="kw-grid">
+          <div class="kw-card"><div class="kw-term">extension builders Worcester</div><div class="kw-intent">High intent, local</div><span class="kw-priority kw-high">Must have</span></div>
+          <div class="kw-card"><div class="kw-term">house extension Malvern</div><div class="kw-intent">Target area, lower competition</div><span class="kw-priority kw-high">Must have</span></div>
+          <div class="kw-card"><div class="kw-term">building contractors Worcestershire</div><div class="kw-intent">Broad brand term</div><span class="kw-priority kw-high">Must have</span></div>
+          <div class="kw-card"><div class="kw-term">single storey extension Worcester</div><div class="kw-intent">Specific, high volume</div><span class="kw-priority kw-high">Must have</span></div>
+        </div>
+        <h4 class="sub">🟠 Medium Priority — Service page headings</h4>
+        <div class="kw-grid">
+          <div class="kw-card"><div class="kw-term">double storey extension Worcester</div><div class="kw-intent">Higher value jobs</div><span class="kw-priority kw-med">Important</span></div>
+          <div class="kw-card"><div class="kw-term">garage builder Worcester</div><div class="kw-intent">Good local volume</div><span class="kw-priority kw-med">Important</span></div>
+          <div class="kw-card"><div class="kw-term">kitchen extension Worcestershire</div><div class="kw-intent">Very common job type</div><span class="kw-priority kw-med">Important</span></div>
+          <div class="kw-card"><div class="kw-term">loft conversion Worcester</div><div class="kw-intent">High avg. job value</div><span class="kw-priority kw-med">Important</span></div>
+          <div class="kw-card"><div class="kw-term">extension builders Malvern Hills</div><div class="kw-intent">Less competition</div><span class="kw-priority kw-med">Important</span></div>
+          <div class="kw-card"><div class="kw-term">rear extension builder Worcester</div><div class="kw-intent">Specific buyer intent</div><span class="kw-priority kw-med">Important</span></div>
+        </div>
+        <h4 class="sub">🟢 Long-tail — Blog posts &amp; FAQ sections</h4>
+        <div class="kw-grid">
+          <div class="kw-card"><div class="kw-term">how much does an extension cost Worcester</div><div class="kw-intent">Research phase, blog post</div><span class="kw-priority kw-low">Blog/FAQ</span></div>
+          <div class="kw-card"><div class="kw-term">do I need planning permission extension Worcestershire</div><div class="kw-intent">Very high search volume</div><span class="kw-priority kw-low">Blog/FAQ</span></div>
+          <div class="kw-card"><div class="kw-term">extension builders near me Malvern</div><div class="kw-intent">GBP target, not page</div><span class="kw-priority kw-low">GBP</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 1: VISUAL ===== -->
+  <div class="section" id="section-1">
+    <div class="section-title">Website — Visual &amp; UX Improvements</div>
+    <div class="section-subtitle">Specific Wix changes to make the site look credible and convert more visitors into enquiries</div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-coral">1</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Colour palette — recommended update</div>
+          <div class="phase-meta">The current site has no consistent palette. This one reflects quality, trust, and Worcestershire.</div>
+        </div>
+        <div class="phase-chevron open">▼</div>
+      </div>
+      <div class="phase-body open">
+        <div class="info-box">In Wix: Design → Site Design → Color Palette. Replace all colours with these five.</div>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#1C3B2E; color:#fff">
+            <div class="swatch-hex">#1C3B2E</div>
+            <div class="swatch-name">Deep Forest Green</div>
+            <div class="swatch-use">Primary / Nav / CTAs</div>
+          </div>
+          <div class="swatch" style="background:#F5F1EA; color:#2C2C2A; border:1px solid #ddd">
+            <div class="swatch-hex">#F5F1EA</div>
+            <div class="swatch-name">Warm Stone</div>
+            <div class="swatch-use">Page backgrounds</div>
+          </div>
+          <div class="swatch" style="background:#C8A96E; color:#fff">
+            <div class="swatch-hex">#C8A96E</div>
+            <div class="swatch-name">Warm Gold</div>
+            <div class="swatch-use">Accents / highlights</div>
+          </div>
+          <div class="swatch" style="background:#2C2C2A; color:#fff">
+            <div class="swatch-hex">#2C2C2A</div>
+            <div class="swatch-name">Near Black</div>
+            <div class="swatch-use">Body text</div>
+          </div>
+          <div class="swatch" style="background:#fff; color:#2C2C2A; border:1px solid #ddd">
+            <div class="swatch-hex">#FFFFFF</div>
+            <div class="swatch-name">White</div>
+            <div class="swatch-use">Cards / sections</div>
+          </div>
+        </div>
+        <div class="info-box">Why this palette: deep green feels established and professional, connecting to the Worcestershire/Malvern Hills landscape. Gold adds warmth and quality. Avoids the generic blue seen on every builder's website.</div>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-blue">2</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Typography — recommended fonts</div>
+          <div class="phase-meta">Currently default Wix fonts with no hierarchy. These changes take 5 minutes.</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <div class="info-box">In Wix: Design → Text Themes. Set heading and body fonts separately. Both are free Google Fonts available inside Wix.</div>
+        <div class="font-preview">
+          <div class="font-preview-name" style="font-family:'DM Serif Display',Georgia,serif; font-weight:400">DM Serif Display — Headings</div>
+          <div class="font-preview-desc">Use for: Page titles, section headings, hero text. Feels established and quality without being stuffy. Available free in Wix font library.</div>
+        </div>
+        <div class="font-preview">
+          <div class="font-preview-name" style="font-family:'DM Sans',sans-serif; font-size:18px; font-weight:400">DM Sans — Body text</div>
+          <div class="font-preview-desc">Use for: all body copy, navigation, buttons, captions. Clean, modern, highly readable. Pairs perfectly with DM Serif Display. Free in Wix.</div>
+        </div>
+        <ul class="task-list" style="margin-top:14px">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Set heading font to DM Serif Display throughout site</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Set body font to DM Sans throughout site</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Set nav background to #1C3B2E, nav text to white</div>
+              <div class="task-desc">The current header has no clear colour. A solid dark green header instantly looks more professional.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">High visual impact</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Change CTA button colour to #C8A96E (gold)</div>
+              <div class="task-desc">Every "Get a Quote" or "Contact Us" button should be gold with dark text. Distinctive and converts well — stands out without being aggressive.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Conversion impact</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-green">3</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Hero section — homepage rewrite</div>
+          <div class="phase-meta">The current homepage has no clear headline about extensions or areas served</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Replace hero background image</div>
+              <div class="task-desc">Replace the current blurred image with a sharp, full-width photo of a completed extension or garage. If no suitable photo exists, use Unsplash.com (free) — search "house extension UK" or "brick extension garden".</div>
+              <div class="task-badges"><span class="badge badge-free">Free photo available</span><span class="badge badge-high">High visual impact</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Replace hero headline text</div>
+              <div class="copy-block">
+                <div class="copy-label">New H1 Headline</div>
+                <button class="copy-btn" onclick="copyText(this,'Building Extensions &amp; Quality Homes Across Worcester &amp; Malvern')">Copy</button>
+                Building Extensions &amp; Quality Homes Across Worcester &amp; Malvern
+              </div>
+              <div class="copy-block">
+                <div class="copy-label">Subheading</div>
+                <button class="copy-btn" onclick="copyText(this,'Established 1997. Over 250 homes built. Fixed price. Quality guaranteed.')">Copy</button>
+                Established 1997. Over 250 homes built. Fixed price. Quality guaranteed.
+              </div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Critical change</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add two CTA buttons below the headline</div>
+              <div class="task-desc">Button 1 (gold): "Get a Free Quote" → contact page. Button 2 (outline/white): "See Our Work" → Recent Projects page.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Conversion critical</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-amber">4</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Trust signals &amp; social proof</div>
+          <div class="phase-meta">Homeowners choosing a builder are risk-averse. Every trust signal reduces that friction.</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add a stats bar section below the hero</div>
+              <div class="copy-block">
+                <div class="copy-label">4 stats to display prominently</div>
+                <button class="copy-btn" onclick="copyText(this,'Established 1997 | 250+ Homes Built | 50+ Extensions Completed | Worcestershire Based')">Copy</button>
+                Established 1997 &nbsp;|&nbsp; 250+ Homes Built &nbsp;|&nbsp; 50+ Extensions Completed &nbsp;|&nbsp; Worcestershire Based
+              </div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">Quick win</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add a testimonials section</div>
+              <div class="task-desc">Ask 3–5 past clients for a short quote. Display with name and location (e.g. "— John T., Worcester"). Wix has a built-in Testimonials widget.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">High trust impact</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add service cards section to homepage</div>
+              <div class="task-desc">A grid of 6 cards — one per service — with a photo, service name, and "Find out more" link to each service page. Services: Single Storey Extensions, Double Storey Extensions, Garage Building, Loft Conversions, Landscaping, New Build Homes.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">SEO + UX impact</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add alt text to every photo</div>
+              <div class="task-desc">In Wix: click any image → Settings → Alt Text. Format: "[type of work] in [location]" e.g. "Single storey rear extension Worcester". Google reads alt text to understand images — most competitors ignore this entirely.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-technical">Technical SEO</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2: CONTENT SEO ===== -->
+  <div class="section" id="section-2">
+    <div class="section-title">Content SEO — Page Copy &amp; Blog</div>
+    <div class="section-subtitle">Specific copy and content to add to each service page. Use these as starting templates — personalise with real project details where possible.</div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-green">1</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Service page template — use for each new page</div>
+          <div class="phase-meta">Every service page needs this structure to rank and convert</div>
+        </div>
+        <div class="phase-chevron open">▼</div>
+      </div>
+      <div class="phase-body open">
+        <div class="info-box">Follow this structure for every new service page. The H1 must contain the target keyword exactly.</div>
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Section 1: H1 Heading (contains target keyword)</div>
+              <div class="copy-block">
+                <div class="copy-label">Example — Extensions Worcester page</div>
+                <button class="copy-btn" onclick="copyText(this,'House Extension Builders in Worcester &amp; Malvern')">Copy</button>
+                House Extension Builders in Worcester &amp; Malvern
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Section 2: Opening paragraph (60–80 words, keyword-rich)</div>
+              <div class="copy-block">
+                <div class="copy-label">Extensions Worcester — opening paragraph</div>
+                <button class="copy-btn" onclick="copyText(this,'Court Property Developers has been building house extensions across Worcester, Malvern and Worcestershire since 1997. Whether you need a single storey extension to create a larger kitchen, a double storey addition to add bedrooms, or a rear extension to open up your living space, we deliver quality builds at fixed prices. With over 50 contract projects completed, we bring developer-level discipline to every domestic extension project.')">Copy</button>
+                Court Property Developers has been building house extensions across Worcester, Malvern and Worcestershire since 1997. Whether you need a single storey extension to create a larger kitchen, a double storey addition to add bedrooms, or a rear extension to open up your living space, we deliver quality builds at fixed prices. With over 50 contract projects completed, we bring developer-level discipline to every domestic extension project.
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Section 3: Service sub-types (H2 headings per type)</div>
+              <div class="task-desc">Use H2 headings: "Single Storey Extensions Worcester", "Double Storey Extensions Worcester", "Rear Extensions", "Kitchen Extensions". Each with 2–3 sentences. These H2s are additional keyword targets Google ranks you for.</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Section 4: Why choose Court Property (trust block)</div>
+              <div class="copy-block">
+                <div class="copy-label">Trust copy block — use on every service page</div>
+                <button class="copy-btn" onclick="copyText(this,'Why choose Court Property?\n\n✓ Established 1997 — over 25 years building in Worcestershire\n✓ 250+ homes and extensions completed\n✓ Fixed price contracts — no surprise costs\n✓ We employ our own key staff\n✓ Experienced with planning permission, building regs and structural engineers\n✓ Full structural warranty provided\n✓ Local to Worcester and Malvern — we know the area')">Copy</button>
+                ✓ Established 1997 — over 25 years building in Worcestershire<br>
+                ✓ 250+ homes and extensions completed<br>
+                ✓ Fixed price contracts — no surprise costs<br>
+                ✓ We employ our own key staff<br>
+                ✓ Experienced with planning, building regs &amp; structural engineers<br>
+                ✓ Full structural warranty provided<br>
+                ✓ Local to Worcester and Malvern
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Section 5: FAQ block (3–5 questions per page)</div>
+              <div class="task-desc">FAQs rank for long-tail searches and appear in Google's "People also ask" results. See the FAQ bank in Phase 2 below.</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Section 6: Clear CTA at the bottom of every page</div>
+              <div class="copy-block">
+                <div class="copy-label">CTA copy</div>
+                <button class="copy-btn" onclick="copyText(this,'Ready to discuss your extension in Worcester or Malvern? Call us on 01905 831778 or send us a message and we will be in touch within one working day.')">Copy</button>
+                Ready to discuss your extension in Worcester or Malvern? Call us on 01905 831778 or send us a message and we will be in touch within one working day.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-blue">2</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">FAQ bank — copy onto service pages</div>
+          <div class="phase-meta">Pick 3–5 per page. They capture "People also ask" search results.</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Q: How much does a house extension cost in Worcester?</div>
+              <div class="copy-block">
+                <div class="copy-label">Suggested answer</div>
+                <button class="copy-btn" onclick="copyText(this,'A single storey extension in Worcester typically costs between £1,500–£2,200 per square metre depending on specification, finishes and complexity. A two-storey extension costs more per square metre but gives significantly more space for the investment. We provide fixed price quotations — contact us for a free, no-obligation estimate for your project.')">Copy</button>
+                A single storey extension in Worcester typically costs between £1,500–£2,200 per square metre depending on specification, finishes and complexity. A two-storey extension costs more per square metre but gives significantly more space for the investment. We provide fixed price quotations — contact us for a free, no-obligation estimate.
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Q: Do I need planning permission for an extension in Worcestershire?</div>
+              <div class="copy-block">
+                <div class="copy-label">Suggested answer</div>
+                <button class="copy-btn" onclick="copyText(this,'Many extensions in Worcestershire can be built under Permitted Development rights, meaning no full planning application is required. Single storey rear extensions up to 4m deep for a detached house, or 3m for a semi-detached or terraced property, often qualify. This depends on your specific property and local conditions. We can advise on planning requirements as part of our free initial consultation.')">Copy</button>
+                Many extensions in Worcestershire can be built under Permitted Development rights, meaning no full planning application is required. Single storey rear extensions up to 4m (detached) or 3m (semi/terraced) often qualify. We advise on planning requirements as part of our free initial consultation.
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Q: How long does a house extension take to build?</div>
+              <div class="copy-block">
+                <div class="copy-label">Suggested answer</div>
+                <button class="copy-btn" onclick="copyText(this,'A single storey extension typically takes 10–14 weeks from groundwork to completion. A two-storey extension is usually 16–22 weeks. This depends on size, complexity and finish specification. We provide a clear project programme before starting so you know exactly what to expect.')">Copy</button>
+                A single storey extension typically takes 10–14 weeks from groundwork to completion. A two-storey extension is usually 16–22 weeks. We provide a clear project programme before starting so you know exactly what to expect.
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Q: Do you cover Malvern and the surrounding villages?</div>
+              <div class="copy-block">
+                <div class="copy-label">Suggested answer</div>
+                <button class="copy-btn" onclick="copyText(this,'Yes — we regularly work across Great Malvern, Malvern Wells, West Malvern, Colwall, Upton upon Severn, Pershore, Droitwich and across the Malvern Hills area, as well as throughout Worcester and wider Worcestershire.')">Copy</button>
+                Yes — we regularly work across Great Malvern, Malvern Wells, West Malvern, Colwall, Upton upon Severn, Pershore, Droitwich and across the Malvern Hills area, as well as throughout Worcester and wider Worcestershire.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-amber">3</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Blog posts to write — 3 priority articles</div>
+          <div class="phase-meta">Each targets high-volume research-phase searches and brings visitors before competitors do</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <div class="info-box">In Wix: Blog → Add Post. Wix Blog is free and these pages will be indexed by Google within days of publishing.</div>
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Blog 1: "How Much Does a House Extension Cost in Worcester in 2025?"</div>
+              <div class="task-desc">Target keyword: "house extension cost Worcester". 600–800 words. Cover: cost per m², typical single vs double storey ranges, what affects price (spec, access, groundworks), why fixed price matters. End with a CTA to get a quote. This article will likely become the most-visited page on the site.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Highest traffic potential</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Blog 2: "Do I Need Planning Permission for an Extension in Worcestershire?"</div>
+              <div class="task-desc">Target keyword: "planning permission extension Worcestershire". 500–700 words. Explain Permitted Development in plain English, size limits, when you need full planning, how to check the Worcestershire planning portal. Builds huge trust.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Very high search volume</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Blog 3: "Single Storey vs Double Storey Extension — Which is Right for You?"</div>
+              <div class="task-desc">Target keyword: "single vs double storey extension". 500–600 words. Compare: cost, planning, build time, use cases, disruption, ROI. Positions Court Property as knowledgeable advisors, not just contractors.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3: GOOGLE BUSINESS ===== -->
+  <div class="section" id="section-3">
+    <div class="section-title">Google Business Profile</div>
+    <div class="section-subtitle">The single highest-ROI action for local search. A fully optimised GBP gets Court Property into the Map Pack — the 3 businesses shown at the top of local Google searches.</div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-coral">1</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Setup &amp; claim the profile</div>
+          <div class="phase-meta">Go to business.google.com — takes 20 minutes, verification by postcard takes 5–14 days</div>
+        </div>
+        <div class="phase-chevron open">▼</div>
+      </div>
+      <div class="phase-body open">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Go to business.google.com and search "Court Property"</div>
+              <div class="task-desc">If the listing already exists, click "Claim this business". If not, click "Add your business". Google often auto-generates listings from web data — check first.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">Do this first</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Set primary category to "General Contractor"</div>
+              <div class="task-desc">Secondary categories to add: Home Builder, Construction Company, Garage Builder, Landscaper</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Ranking signal</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Complete all business details</div>
+              <div class="task-desc">Name: Court Property Developers Ltd. Address: Priors Court, Lower Ferry Lane, Callow End, Worcester, WR2 4TJ. Phone: 01905 831778. Website: courtproperty.co.uk. Hours: Mon–Fri 8am–6pm.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Set service area to cover Worcester, Malvern and Worcestershire</div>
+              <div class="task-desc">Add: Worcester, Great Malvern, Malvern, Upton upon Severn, Pershore, Droitwich, Kidderminster, Bromsgrove, Redditch. This tells Google exactly where to show the listing in map searches.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Ranking signal</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Complete the verification process</div>
+              <div class="task-desc">Most likely route: a postcard to the Callow End address. It looks like junk mail — watch for it. Contains a 5-digit code. Log back into business.google.com and enter it. Profile goes live within 24 hours of verification.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Required to go live</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-blue">2</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Business description — ready to paste</div>
+          <div class="phase-meta">750 character limit. Keyword-rich but reads naturally.</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <div class="copy-block">
+          <div class="copy-label">Google Business Profile description</div>
+          <button class="copy-btn" onclick="copyText(this,'Court Property Developers Ltd are experienced building contractors based in Worcestershire, established in 1997. We specialise in house extensions — single storey extensions, double storey extensions, rear extensions and kitchen extensions — as well as garage building, landscaping and loft conversions across Worcester, Malvern and the surrounding areas. With over 250 homes built and 50+ contract projects completed, we bring developer-quality build standards to every domestic project. Fixed price contracts. Our own employed staff. Full structural warranty.')">Copy</button>
+          Court Property Developers Ltd are experienced building contractors based in Worcestershire, established in 1997. We specialise in house extensions — single storey extensions, double storey extensions, rear extensions and kitchen extensions — as well as garage building, landscaping and loft conversions across Worcester, Malvern and the surrounding areas. With over 250 homes built and 50+ contract projects completed, we bring developer-quality build standards to every domestic project. Fixed price contracts. Our own employed staff. Full structural warranty.
+        </div>
+        <ul class="task-list" style="margin-top:10px">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add all services in the Services section</div>
+              <div class="task-desc">Add: House Extensions, Single Storey Extensions, Double Storey Extensions, Rear Extensions, Kitchen Extensions, Garage Building, Garage Extensions, Loft Conversions, Garden Landscaping, New Build Homes, Building Renovations.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Ranking signal</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Upload minimum 15 photos</div>
+              <div class="task-desc">Include: completed extensions, garages, landscaping, new builds, logo, team photo. Name photo files before uploading using keywords: "single-storey-extension-worcester.jpg". Profiles with 10+ photos get 35% more clicks on average.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Major ranking factor</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-green">3</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Getting Google reviews — the most important ongoing task</div>
+          <div class="phase-meta">5 genuine 5-star reviews will move you above most local competitors</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Get your Google review link</div>
+              <div class="task-desc">In GBP dashboard → Get more reviews → Copy the short review link. This goes directly to the review form for your business. Save it somewhere easy to paste.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">One-time setup</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Text or email every satisfied client this message</div>
+              <div class="copy-block">
+                <div class="copy-label">Review request template — SMS or email</div>
+                <button class="copy-btn" onclick="copyText(this,'Hi [name], really glad you\'re happy with how the project turned out. Would you mind leaving us a quick Google review? It makes a huge difference to a small local business and takes about 60 seconds: [YOUR REVIEW LINK]. Many thanks, Mark / Roy')">Copy</button>
+                Hi [name], really glad you're happy with how the project turned out. Would you mind leaving us a quick Google review? It makes a huge difference to a small local business and takes about 60 seconds: [YOUR REVIEW LINK]. Many thanks, Mark / Roy
+              </div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Highest ranking impact</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Post a Google Update once a month (minimum)</div>
+              <div class="task-desc">GBP has a free "Posts" feature. Share a project photo, service announcement, or seasonal message. Active profiles rank higher. In GBP: Add update → Photo + caption + link to relevant page.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Ongoing ranking signal</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-amber">4</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Directory listings — free local citations</div>
+          <div class="phase-meta">Consistent listings across directories boosts GBP rankings and generates direct leads</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <div class="info-box">Use exactly the same business name, address and phone number on every platform. Inconsistencies confuse Google.</div>
+        <ul class="task-list">
+          <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Checkatrade — checkatrade.com</div><div class="task-desc">Paid but highly trusted. Start with free listing, upgrade later if leads come through.</div><div class="task-badges"><span class="badge badge-free">Free listing available</span><span class="badge badge-high">High trust</span></div></div></li>
+          <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Bark.com — free to list, pay per lead</div><div class="task-desc">You only pay when someone contacts you. Worth listing and monitoring.</div><div class="task-badges"><span class="badge badge-free">Free to list</span></div></div></li>
+          <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">MyBuilder — mybuilder.com</div><div class="task-desc">Free profile — good for local extension lead generation.</div><div class="task-badges"><span class="badge badge-free">Free</span></div></div></li>
+          <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Yell.com — free basic listing</div><div class="task-desc">Still a significant local SEO citation source.</div><div class="task-badges"><span class="badge badge-free">Free</span></div></div></li>
+          <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">Houzz.com — free contractor profile</div><div class="task-desc">Strong for extensions and home improvement. Upload project photos. Good domain authority backlink.</div><div class="task-badges"><span class="badge badge-free">Free</span></div></div></li>
+          <li class="task-item"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-content"><div class="task-title">TrustATrader — trustatrader.com</div><div class="task-desc">Well-used in Worcestershire area. Strong trust signals.</div><div class="task-badges"><span class="badge badge-free">Free listing</span></div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4: SOCIAL MEDIA ===== -->
+  <div class="section" id="section-4">
+    <div class="section-title">Facebook &amp; Social Media</div>
+    <div class="section-subtitle">Organic social strategy focused on Facebook as primary, Instagram as secondary. No paid budget needed to start.</div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-blue">1</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Facebook page — profile update</div>
+          <div class="phase-meta">The existing page needs updating to reflect new services</div>
+        </div>
+        <div class="phase-chevron open">▼</div>
+      </div>
+      <div class="phase-body open">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Update Facebook page category</div>
+              <div class="task-desc">Page Settings → Page Info → Category. Set to "General Contractor" (primary) and add "Home Improvement" as second category.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Update page About text</div>
+              <div class="copy-block">
+                <div class="copy-label">New Facebook About text</div>
+                <button class="copy-btn" onclick="copyText(this,'Building contractors covering Worcester, Malvern and Worcestershire. We build house extensions (single storey, double storey, rear extensions), garages, loft conversions and large landscaping projects. Also new build homes and conversions. Established 1997. 250+ homes built. Fixed price contracts. Call 01905 831778.')">Copy</button>
+                Building contractors covering Worcester, Malvern and Worcestershire. We build house extensions (single storey, double storey, rear extensions), garages, loft conversions and large landscaping projects. Also new build homes and conversions. Established 1997. 250+ homes built. Fixed price contracts. Call 01905 831778.
+              </div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">10 mins</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Update cover photo</div>
+              <div class="task-desc">Replace with a wide (820×312px) photo of a completed extension. Add phone number as text overlay using Canva (free): "01905 831778 | Worcester &amp; Malvern". The cover photo is the first thing every page visitor sees.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">First impression</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add a "Get a Quote" action button to the page</div>
+              <div class="task-desc">Below the cover photo. Set to "Get a Quote" → link to your contact page URL. Appears prominently on mobile and generates direct enquiries.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Direct leads</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Create an Instagram account and link to Facebook</div>
+              <div class="task-desc">Username: @courtpropertydevelopers or @courtpropertyworcs. Bio: "Building extensions, garages &amp; homes across Worcester &amp; Malvern since 1997. Call 01905 831778." Link both accounts via Meta Business Suite → Linked Accounts to post to both simultaneously.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-green">2</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Content strategy — what to post and when</div>
+          <div class="phase-meta">5 content types, posted 2–3 times per week. Consistency beats frequency.</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Post type 1: Project progress (weekly, Monday or Tuesday)</div>
+              <div class="task-desc">A photo from any active site — foundations, frame stage, roof on, completion. One photo, short caption. Most-shared post type in local building groups.</div>
+              <div class="copy-block">
+                <div class="copy-label">Example caption template</div>
+                <button class="copy-btn" onclick="copyText(this,'Good progress on this rear single storey extension in [TOWN] this week — steelwork going in for the roof today. Lovely project for a great family who wanted to open up their kitchen into the garden. Thinking about an extension in Worcester or Malvern? Call 01905 831778. #extensions #worcester #malvern #houseextension #building')">Copy</button>
+                Good progress on this rear single storey extension in [TOWN] this week — steelwork going in for the roof today. Lovely project opening up the kitchen into the garden. Thinking about an extension? Call 01905 831778. #extensions #worcester #malvern
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Post type 2: Before &amp; after (bi-weekly)</div>
+              <div class="task-desc">Side-by-side photo of before and after a project. Use Canva (free) to create a split image. These get shared constantly by homeowners. Even older projects work — dig out any before photos.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Highest engagement type</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Post type 3: Educational posts (monthly)</div>
+              <div class="copy-block">
+                <div class="copy-label">Example educational post</div>
+                <button class="copy-btn" onclick="copyText(this,'Did you know — in many cases you can build a single storey rear extension without full planning permission under Permitted Development rights? For a detached house, up to 4 metres deep. For a semi-detached or terraced, up to 3 metres. We can advise on whether your project qualifies as part of a free initial chat. Call 01905 831778.')">Copy</button>
+                Did you know — in many cases you can build a single storey rear extension without full planning permission under Permitted Development rights? For a detached house, up to 4 metres deep. For a semi-detached or terraced, up to 3 metres. We can advise as part of a free initial chat. Call 01905 831778.
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Post type 4: Credibility posts (monthly)</div>
+              <div class="copy-block">
+                <div class="copy-label">Example credibility post</div>
+                <button class="copy-btn" onclick="copyText(this,'Court Property has been building homes and extensions across Worcestershire since 1997. Over 250 homes. Over 50 contract projects. The same core team, the same subcontractors we\'ve trusted for years. When you hire us for your extension, you\'re not getting a new company — you\'re getting 25 years of local building experience. 📞 01905 831778')">Copy</button>
+                Court Property has been building homes and extensions across Worcestershire since 1997. Over 250 homes. Over 50 contract projects. The same core team, the same trusted subcontractors. When you hire us for your extension, you're getting 25 years of local building experience. 📞 01905 831778
+              </div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Post type 5: Local area posts (monthly)</div>
+              <div class="task-desc">Reference local landmarks and villages: "Working in the Malvern Hills today — hard to beat the office views." Tag the location in every post. These signal locality to the Facebook algorithm and resonate with local audiences.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-amber">3</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Facebook groups — free lead generation</div>
+          <div class="phase-meta">Worcestershire Facebook groups are an underused free source of local leads</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Join local Facebook groups from the Court Property page</div>
+              <div class="task-desc">Search for and join: "Worcester Community", "Malvern Community Group", "Great Malvern Residents", "Malvern Hills Area Buy Sell Swap", "Worcestershire Locals", "Worcester Noticeboard". Search monthly — new groups are created frequently.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Monitor for "recommend a builder" posts daily</div>
+              <div class="task-desc">Reply promptly and genuinely — don't just post the phone number. Example: "We've built extensions across the Malvern area for over 25 years — happy to have a free chat about your project. Give Mark a call on 01905 831778."</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">High conversion rate</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Post project photos into local groups after completion</div>
+              <div class="task-desc">When a project completes in a specific area, share the before/after into that area's community group. A "just finished this extension in Great Malvern" post in the Great Malvern group reaches every local homeowner organically.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Hyper-local reach</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-purple">4</div>
+        <div class="phase-title-wrap">
+          <div class="phase-title">Instagram hashtag strategy</div>
+          <div class="phase-meta">Use on every Instagram post to extend reach beyond followers</div>
+        </div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <div class="copy-block">
+          <div class="copy-label">Copy this hashtag set onto every Instagram post</div>
+          <button class="copy-btn" onclick="copyText(this,'#houseextension #extensionbuilder #worcestershire #worcester #malvern #greatmalvern #malvernhills #singlestoreyextension #doublestorey #buildingwork #homeextension #extensionideas #ukbuilder #constructionuk #homeimprovement #propertyuk #newbuild #garagebuild #worcestershirebusiness #malvernbusiness')">Copy</button>
+          #houseextension #extensionbuilder #worcestershire #worcester #malvern #greatmalvern #malvernhills #singlestoreyextension #doublestorey #buildingwork #homeextension #extensionideas #ukbuilder #constructionuk #homeimprovement #propertyuk #newbuild #garagebuild #worcestershirebusiness #malvernbusiness
+        </div>
+        <div class="info-box">Use 15–20 hashtags per Instagram post. Add them as the first comment rather than in the caption to keep captions clean. On Facebook, use 3–5 hashtags only — more looks spammy.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-footer">
+    Court Property Developers Ltd — Digital Growth Guide<br>
+    Produced by Vernwell Ltd &nbsp;·&nbsp; courtproperty.co.uk
+  </div>
+
+</div>
+
+<script>
+  const SECTIONS = ['Website — Technical','Website — Visual','Content & SEO','Google Business','Facebook & Social'];
+  let totalTasks = 0;
+  const circumference = 138.23;
+
+  function init() {
+    totalTasks = document.querySelectorAll('.task-check').length;
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const done = document.querySelectorAll('.task-check.checked').length;
+    const pct = totalTasks > 0 ? Math.round((done / totalTasks) * 100) : 0;
+    const offset = circumference - (pct / 100) * circumference;
+    document.getElementById('prog-circle').style.strokeDashoffset = offset;
+    document.getElementById('prog-pct').textContent = pct + '%';
+    document.getElementById('prog-done').textContent = done + ' of ' + totalTasks + ' tasks completed';
+    document.getElementById('prog-left').textContent = done === totalTasks && totalTasks > 0
+      ? 'All tasks complete — great work!'
+      : (totalTasks - done) + ' tasks remaining across all sections';
+  }
+
+  function toggleTask(el) {
+    el.classList.toggle('checked');
+    const title = el.parentElement.querySelector('.task-title');
+    if (title) title.classList.toggle('done', el.classList.contains('checked'));
+    updateProgress();
+  }
+
+  function togglePhase(headerEl) {
+    const body = headerEl.nextElementSibling;
+    const chev = headerEl.querySelector('.phase-chevron');
+    body.classList.toggle('open');
+    chev.classList.toggle('open');
+  }
+
+  function goSection(idx) {
+    document.querySelectorAll('.section').forEach((s, i) => s.classList.toggle('visible', i === idx));
+    document.querySelectorAll('.nav-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+    document.querySelectorAll('.pb-step').forEach((s, i) => s.classList.toggle('active', i === idx));
+    document.getElementById('pb-label').textContent = SECTIONS[idx];
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function copyText(btn, text) {
+    const decoded = text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    navigator.clipboard.writeText(decoded).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1800);
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = decoded;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1800);
+    });
+  }
+
+  init();
+</script>
+</body>
+</html>
