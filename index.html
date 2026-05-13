@@ -11,10 +11,10 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --primary: #1C3B2E;
-    --primary-light: #2a5240;
+    --primary: #00006A;
+    --primary-light: #1A1A8C;
     --accent: #C8A96E;
-    --stone: #F5F1EA;
+    --stone: #f4f4f9;
     --text: #2C2C2A;
     --text-muted: #6b6b68;
     --text-hint: #9b9b98;
@@ -22,7 +22,7 @@
     --border-med: rgba(44,44,42,0.22);
     --bg-card: #ffffff;
     --bg-secondary: #f8f6f2;
-    --bg-tertiary: #f0ede8;
+    --bg-tertiary: #E8E8F5;
     --radius-md: 8px;
     --radius-lg: 12px;
     --radius-xl: 16px;
@@ -136,7 +136,7 @@
   .prog-ring .prog-text {
     position: absolute; inset: 0;
     display: flex; align-items: center; justify-content: center;
-    font-size: 13px; font-weight: 600; color: var(--primary);
+    font-size: 13px; font-weight: 600; color: #00006A;
   }
   .prog-info { flex: 1; }
   .prog-info h4 { font-size: 14px; font-weight: 500; }
@@ -161,9 +161,9 @@
   .nav-btn:hover { background: var(--bg-secondary); color: var(--text); }
   .nav-btn.active {
     background: var(--primary);
-    color: #5DCAA5;
-    border-color: var(--primary);
-    box-shadow: 0 2px 8px rgba(28,59,46,0.25);
+    color: #a0a8e8;
+    border-color: #00006A;
+    box-shadow: 0 2px 8px rgba(0,0,106,0.25);
   }
 
   /* SECTIONS */
@@ -236,12 +236,12 @@
     display: flex; align-items: center; justify-content: center;
     transition: all 0.15s;
   }
-  .task-check:hover { border-color: var(--primary); }
-  .task-check.checked { background: var(--primary); border-color: var(--primary); }
+  .task-check:hover { border-color: #00006A; }
+  .task-check.checked { background: #00006A; border-color: #00006A; }
   .task-check.checked::after {
     content: '';
     width: 5px; height: 9px;
-    border: 2px solid #5DCAA5;
+    border: 2px solid #a0a8e8;
     border-top: none; border-left: none;
     transform: rotate(45deg) translateY(-1px);
   }
@@ -277,7 +277,7 @@
   .copy-label {
     font-size: 10px; font-weight: 600;
     letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--primary); margin-bottom: 6px;
+    color: #00006A; margin-bottom: 6px;
   }
   .copy-btn {
     position: absolute; top: 10px; right: 10px;
@@ -289,7 +289,7 @@
     cursor: pointer; font-family: inherit;
     transition: all 0.15s;
   }
-  .copy-btn:hover { background: var(--primary); color: #5DCAA5; border-color: var(--primary); }
+  .copy-btn:hover { background: #00006A; color: #a0a8e8; border-color: #00006A; }
   .copy-btn.copied { background: #E1F5EE; color: #0F6E56; border-color: #9FE1CB; }
 
   /* KEYWORDS */
@@ -410,7 +410,7 @@
     <div class="prog-ring">
       <svg width="56" height="56" viewBox="0 0 56 56">
         <circle cx="28" cy="28" r="22" fill="none" stroke="#e8e5df" stroke-width="4"/>
-        <circle id="prog-circle" cx="28" cy="28" r="22" fill="none" stroke="#1C3B2E" stroke-width="4"
+        <circle id="prog-circle" cx="28" cy="28" r="22" fill="none" stroke="#00006A" stroke-width="4"
           stroke-dasharray="138.23" stroke-dashoffset="138.23" stroke-linecap="round"/>
       </svg>
       <div class="prog-text" id="prog-pct">0%</div>
@@ -661,35 +661,40 @@
         <div class="phase-chevron open">▼</div>
       </div>
       <div class="phase-body open">
-        <div class="info-box">In Wix: Design → Site Design → Color Palette. Replace all colours with these five.</div>
+        <div class="info-box">In Wix: Design → Site Design → Color Palette. These colours extend your existing logo — no brand change required.</div>
         <div class="color-swatches">
-          <div class="swatch" style="background:#1C3B2E; color:#fff">
-            <div class="swatch-hex">#1C3B2E</div>
-            <div class="swatch-name">Deep Forest Green</div>
-            <div class="swatch-use">Primary / Nav / CTAs</div>
+          <div class="swatch" style="background:#00006A; color:#fff">
+            <div class="swatch-hex">#00006A</div>
+            <div class="swatch-name">Court Property Navy</div>
+            <div class="swatch-use">Primary — nav, headers, CTAs</div>
           </div>
-          <div class="swatch" style="background:#F5F1EA; color:#2C2C2A; border:1px solid #ddd">
-            <div class="swatch-hex">#F5F1EA</div>
-            <div class="swatch-name">Warm Stone</div>
-            <div class="swatch-use">Page backgrounds</div>
+          <div class="swatch" style="background:#1A1A8C; color:#fff">
+            <div class="swatch-hex">#1A1A8C</div>
+            <div class="swatch-name">Navy Hover</div>
+            <div class="swatch-use">Button hover &amp; active states</div>
+          </div>
+          <div class="swatch" style="background:#E8E8F5; color:#00006A; border:1px solid #C8C8E8">
+            <div class="swatch-hex">#E8E8F5</div>
+            <div class="swatch-name">Navy Tint</div>
+            <div class="swatch-use">Section backgrounds / highlights</div>
           </div>
           <div class="swatch" style="background:#C8A96E; color:#fff">
             <div class="swatch-hex">#C8A96E</div>
             <div class="swatch-name">Warm Gold</div>
-            <div class="swatch-use">Accents / highlights</div>
+            <div class="swatch-use">"Get a Quote" buttons only</div>
+          </div>
+          <div class="swatch" style="background:#ffffff; color:#2C2C2A; border:1px solid #ddd">
+            <div class="swatch-hex">#FFFFFF</div>
+            <div class="swatch-name">White</div>
+            <div class="swatch-use">Cards, page backgrounds</div>
           </div>
           <div class="swatch" style="background:#2C2C2A; color:#fff">
             <div class="swatch-hex">#2C2C2A</div>
             <div class="swatch-name">Near Black</div>
             <div class="swatch-use">Body text</div>
           </div>
-          <div class="swatch" style="background:#fff; color:#2C2C2A; border:1px solid #ddd">
-            <div class="swatch-hex">#FFFFFF</div>
-            <div class="swatch-name">White</div>
-            <div class="swatch-use">Cards / sections</div>
-          </div>
         </div>
-        <div class="info-box">Why this palette: deep green feels established and professional, connecting to the Worcestershire/Malvern Hills landscape. Gold adds warmth and quality. Avoids the generic blue seen on every builder's website.</div>
+        <div class="info-box">Why gold for CTAs: the logo navy on white is clean and authoritative, but needs one warm accent to drive action. Gold is the classic contrast partner for deep navy (think quality financial services, law firms, premium builders). It makes "Get a Quote" stand out without clashing with the brand. The navy tint (#E8E8F5) is just the brand colour at ~10% opacity — so section backgrounds feel on-brand rather than generic grey.</div>
       </div>
     </div>
 
@@ -730,8 +735,8 @@
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
-              <div class="task-title">Set nav background to #1C3B2E, nav text to white</div>
-              <div class="task-desc">The current header has no clear colour. A solid dark green header instantly looks more professional.</div>
+              <div class="task-title">Set nav background to #00006A, nav text to white</div>
+              <div class="task-desc">The current header has no clear colour. A solid navy header matches the logo and instantly looks more professional and consistent.</div>
               <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">High visual impact</span></div>
             </div>
           </li>
