@@ -530,7 +530,8 @@
       <button class="sub-btn" onclick="goContentPage(6)">Renovations</button>
       <button class="sub-btn" onclick="goContentPage(7)">About Page</button>
       <button class="sub-btn" onclick="goContentPage(8)">Building Contractors</button>
-      <button class="sub-btn" onclick="goContentPage(9)">Blog Posts</button>
+      <button class="sub-btn" onclick="goContentPage(9)">Contact</button>
+      <button class="sub-btn" onclick="goContentPage(10)">Blog Posts</button>
     </div>
 
     <!-- PAGE 0: HOMEPAGE -->
@@ -1696,8 +1697,127 @@ A: Yes — Court Property Developers Ltd carries full public liability insurance
       </div>
     </div>
 
-    <!-- BLOG POSTS -->
+    <!-- PAGE 9: CONTACT -->
     <div class="content-page" id="cp-9">
+      <div class="page-intro">
+        <h3>Contact Page</h3>
+        <div class="pi-meta">
+          <span class="pi-pill pill-navy">URL: /contact</span>
+          <span class="pi-pill pill-gold">Goal: convert visitors into enquiries</span>
+          <span class="pi-pill pill-green">Last step before a call or form fill</span>
+        </div>
+        <p>The contact page is a conversion page, not a ranking page. Its job is to make it as easy as possible for a motivated visitor to get in touch. Phone number prominent, form short, expectations clear, map visible. Every extra element or unnecessary field costs enquiries.</p>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-seo">SEO</span><span class="block-title">Page title &amp; meta description</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="copy-area"><span class="copy-label">Page Title (58 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Contact Court Property | Free Quotes Worcester &amp; Malvern</div>
+          <div class="copy-area"><span class="copy-label">Meta Description (150 chars)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Get a free, no-obligation quote for your building project across Worcester, Malvern and Worcestershire. Call 01905 831778 or send us a message.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">H1</span><span class="block-title">Page headline</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">Not just "Contact Us" — the H1 should reinforce the decision a visitor is about to make and set clear expectations.</div>
+          <div class="copy-area"><span class="copy-label">H1</span><button class="copy-btn" onclick="cp(this)">Copy</button>Get a Free Quote</div>
+          <div class="copy-area"><span class="copy-label">Subheading</span><button class="copy-btn" onclick="cp(this)">Copy</button>Free site visits and no-obligation quotations for building projects across Worcester, Malvern and Worcestershire.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Phone number block — must appear before the form</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">Display the phone number large — at least 24px — above the enquiry form. Most people will call rather than fill in a form. Make calling the path of least resistance.</div>
+          <div class="copy-area"><span class="copy-label">Phone label (small text above the number)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Call us directly</div>
+          <div class="copy-area"><span class="copy-label">Phone number (display large, in navy)</span><button class="copy-btn" onclick="cp(this)">Copy</button>01905 831778</div>
+          <div class="copy-area"><span class="copy-label">Hours (small text below the number)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Monday to Friday, 8am–6pm</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">Short intro paragraph — sets expectations</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="copy-area"><span class="copy-label">Intro paragraph (sits between the phone block and the form)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Prefer to send a message? Fill in the form below and we will be in touch within one working day. Tell us as much or as little as you know about your project — we are happy to discuss ideas at an early stage as well as quote for projects that are fully planned.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Layout</span><span class="block-title">Enquiry form — field structure</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">In Wix: use the built-in Form widget. Keep fields to a minimum — every extra field reduces completions. The fields below are the right balance between gathering useful information and not putting people off.</div>
+          <div class="copy-area"><span class="copy-label">Form fields — in this order</span><button class="copy-btn" onclick="cp(this)">Copy</button>Your name (required)
+Phone number (required)
+Email address (required)
+Type of project (dropdown — required)
+Your approximate location / postcode (optional)
+Tell us about your project (text area — optional)</div>
+          <div class="copy-area"><span class="copy-label">Dropdown options for "Type of project"</span><button class="copy-btn" onclick="cp(this)">Copy</button>House Extension
+Garage or Outbuilding
+Loft Conversion
+Landscaping or External Works
+Building Renovation
+New Build / Self Build
+Contract / Commercial Work
+Other</div>
+          <div class="copy-area"><span class="copy-label">Submit button label (gold button)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Send Enquiry</div>
+          <div class="copy-area"><span class="copy-label">Confirmation message shown after submission</span><button class="copy-btn" onclick="cp(this)">Copy</button>Thank you — we have received your enquiry and will be in touch within one working day. If your project is urgent, call us directly on 01905 831778.</div>
+          <div class="warn-box">Set up email notifications in Wix so every form submission sends an immediate email to the business. Go to Form Settings → Submissions → Email Notifications. Without this, enquiries sit unread in the Wix dashboard and get missed.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Layout</span><span class="block-title">Business details block — alongside or below the form</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">Display these details alongside the form — left column form, right column details works well in Wix. The address must match the Google Business Profile exactly — Google cross-references these.</div>
+          <div class="copy-area"><span class="copy-label">Address (must match GBP exactly)</span><button class="copy-btn" onclick="cp(this)">Copy</button>Court Property Developers Ltd
+Priors Court
+Lower Ferry Lane
+Callow End
+Worcester
+WR2 4TJ</div>
+          <div class="copy-area"><span class="copy-label">Phone</span><button class="copy-btn" onclick="cp(this)">Copy</button>01905 831778</div>
+          <div class="copy-area"><span class="copy-label">Email</span><button class="copy-btn" onclick="cp(this)">Copy</button>info@courtproperty.co.uk</div>
+          <div class="copy-area"><span class="copy-label">Hours</span><button class="copy-btn" onclick="cp(this)">Copy</button>Monday – Friday: 8:00am – 6:00pm
+Saturday: By appointment
+Sunday: Closed</div>
+          <div class="copy-area"><span class="copy-label">Coverage area (brief version)</span><button class="copy-btn" onclick="cp(this)">Copy</button>We cover Worcester, Malvern, and the wider Worcestershire area including Droitwich, Pershore, Upton upon Severn, Kidderminster and surrounding towns and villages.</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-img">Image</span><span class="block-title">Map embed</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="img-brief">
+            <div class="img-brief-title">Add a Google Maps embed below the form and details</div>
+            <ul>
+              <li>In Wix: Add Element → Embed → Google Maps → search for "Court Property Developers Ltd, Callow End"</li>
+              <li>Set the map to show the Callow End location with the business pin visible</li>
+              <li>A map embed adds immediate local credibility and helps visitors confirm the business is genuinely local</li>
+              <li>Google also uses map embeds as a trust signal — it confirms the address is real and consistent with the Business Profile</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-copy">Copy</span><span class="block-title">What happens next — reassurance block below the form</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">A short "what to expect" section below the form removes uncertainty and increases form completions. People are more likely to submit an enquiry if they know what happens next.</div>
+          <div class="copy-area"><span class="copy-label">H2</span><button class="copy-btn" onclick="cp(this)">Copy</button>What Happens Next</div>
+          <div class="copy-area"><span class="copy-label">Body copy</span><button class="copy-btn" onclick="cp(this)">Copy</button>Once we receive your enquiry we will call or email you within one working day to have an initial conversation about your project. If it sounds like a good fit, we will arrange a free site visit at a time that suits you — usually within the week.
+
+At the site visit we look at the project properly, ask the right questions, and take the measurements we need. We then prepare a detailed, itemised, fixed price quotation which we send to you in writing. There is no pressure and no obligation — if you decide not to proceed, that is completely fine.
+
+Most projects move from first enquiry to quotation within 7–10 days.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BLOG POSTS -->
+    <div class="content-page" id="cp-10">
       <div class="page-intro">
         <h3>Blog Posts — 3 Priority Articles</h3>
         <div class="pi-meta">
