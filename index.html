@@ -117,6 +117,7 @@
   .bt-copy { background: #FDF3E3; color: #8B6914; }
   .bt-img  { background: #E1F5EE; color: #0F6E56; }
   .bt-faq  { background: #FAECE7; color: #993C1D; }
+  .bt-technical { background: #EEEDFE; color: #3C3489; }
   .block-title { font-size: 13px; font-weight: 500; flex: 1; }
   .block-chevron { font-size: 11px; color: var(--text-hint); transition: transform 0.2s; }
   .block-chevron.open { transform: rotate(180deg); }
@@ -399,6 +400,186 @@
     </div>
   </div>
 
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-purple">5</div>
+        <div class="phase-title-wrap"><div class="phase-title">Remaining actions — outstanding items from site audit</div><div class="phase-meta">Items identified from reviewing the live site — all still to complete</div></div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add FAQ sections to all service pages</div>
+              <div class="task-desc">Extensions Worcester is missing its FAQ section. Check all other service pages too. In Wix: Add Element → Accordion — add each question as a row. Copy the FAQ content from the relevant page in the Content &amp; SEO tab above. The accordion widget is sufficient for Google to read the content — but add FAQPage schema markup on top (see Schema task below) to unlock expandable questions in search results.</div>
+              <div class="task-badges"><span class="badge badge-high">High SEO impact</span><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add Side Extensions H2 section to Extensions Worcester page</div>
+              <div class="task-desc">The fourth H2 section — "Side Extensions and Wraparound Extensions" — is missing from the live page. Copy the content from the Extensions Worcester tab in Content &amp; SEO and add it after the Rear Extensions section.</div>
+              <div class="task-badges"><span class="badge badge-content">Content</span><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Fix Landscaping service card link on homepage</div>
+              <div class="task-desc">The Landscaping card currently links to /loft-conversions-worcestershire instead of /landscaping-worcestershire. In Wix: click the Landscaping card image → Link → update to the correct URL.</div>
+              <div class="task-badges"><span class="badge badge-high">Fix urgently</span><span class="badge badge-quick">2 mins</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Fill in "Areas We Cover" section on the contact page</div>
+              <div class="task-desc">There is an H2 heading with no content beneath it. Either add the coverage copy from the contact page in the Content &amp; SEO tab, or delete the heading entirely.</div>
+              <div class="copy-block" style="margin-top:8px">
+                <div class="copy-label">Coverage copy to add beneath the heading</div>
+                <button class="copy-btn" onclick="copyText(this,'We cover Worcester, Malvern and the wider Worcestershire area including Droitwich, Pershore, Upton upon Severn, Kidderminster and surrounding towns and villages. See our About page for a full list of areas covered.')">Copy</button>
+                We cover Worcester, Malvern and the wider Worcestershire area including Droitwich, Pershore, Upton upon Severn, Kidderminster and surrounding towns and villages. See our About page for a full list of areas covered.
+              </div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add "People Behind the Work" section to About page</div>
+              <div class="task-desc">The About page is missing the personal section naming the founders. This is the most trust-building section on the page. Google responds to named individuals — anonymous corporate copy ranks less well than content that names real people. Add a section with the directors' names, background and personal approach. See the About page tab in Content &amp; SEO for the template.</div>
+              <div class="task-badges"><span class="badge badge-high">Trust signal</span><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add Google Reviews to homepage and contact page</div>
+              <div class="task-desc">20 five-star Google reviews is a significant asset currently only visible on the Google Business Profile. Pull them onto the site using the Elfsight Google Reviews widget. Go to elfsight.com → Google Reviews widget → connect your Google Business Profile → copy the embed code → In Wix: Add Element → Embed → Custom Code → paste the code. Place on the homepage below the service cards grid, and on the contact page alongside the enquiry form. Free tier available — approximately £5/month to remove the Elfsight badge.</div>
+              <div class="task-badges"><span class="badge badge-high">High conversion impact</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add NHBC A1 rating to homepage stats bar and service page trust sections</div>
+              <div class="task-desc">Court Property holds the NHBC A1 rating — the highest of 16 contractor ratings. This is rare for a company of this size and is a powerful differentiator. Currently only mentioned on the About page. Add to: (1) homepage stats bar alongside Established 1997 and 250+ Homes, (2) every service page trust section. Always include the explanation — most visitors won't know what it means without context.</div>
+              <div class="copy-block" style="margin-top:8px">
+                <div class="copy-label">How to display it in the stats bar</div>
+                <button class="copy-btn" onclick="copyText(this,'NHBC A1 Rated — the highest of 16 contractor ratings')">Copy</button>
+                NHBC A1 Rated — the highest of 16 contractor ratings
+              </div>
+              <div class="copy-block">
+                <div class="copy-label">How to reference it in service page trust sections</div>
+                <button class="copy-btn" onclick="copyText(this,'Court Property is registered with NHBC with an A1 rating — the highest of 16 contractor ratings, awarded based on build quality, claims history and financial standing.')">Copy</button>
+                Court Property is registered with NHBC with an A1 rating — the highest of 16 contractor ratings, awarded based on build quality, claims history and financial standing.
+              </div>
+              <div class="task-badges"><span class="badge badge-high">Major trust signal</span><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add schema markup — FAQPage and LocalBusiness</div>
+              <div class="task-desc">Schema markup is structured data that tells Google and AI search tools (ChatGPT, Perplexity, Google AI Overviews) exactly what the content means. FAQPage schema can trigger expandable questions directly in Google search results. LocalBusiness schema ensures Google and AI tools represent the business correctly in answers. In Wix: Settings → Custom Code → Add Code → paste the JSON-LD → set to Head → select the relevant page. See the Schema tab in the Content &amp; SEO section for the ready-to-paste code for each page.</div>
+              <div class="task-badges"><span class="badge badge-high">AI search visibility</span><span class="badge badge-technical">Technical</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add Open Graph images to all pages</div>
+              <div class="task-desc">When pages are shared on Facebook, WhatsApp or LinkedIn the preview currently shows no image — just text. In Wix: go to each page → SEO Settings → Social Share → upload the hero image used on that page. Use the same image that appears at the top of the page. This takes about 2 minutes per page and means every shared link looks professional rather than blank.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">2 mins per page</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Fix CTA button — link to /contact on desktop, not tel:</div>
+              <div class="task-desc">The gold "Get a Free Quote" button currently triggers a phone call (tel: link) which is unexpected on desktop — it opens the default phone app or throws an error. On mobile this is fine. Best fix: link the CTA button to /contact on all devices. Keep the phone number itself as the dial link separately. In Wix: click the button → Link → Web Address → https://www.courtproperty.co.uk/contact</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add privacy policy and link from contact form</div>
+              <div class="task-desc">The contact form collects name, email and phone number. GDPR requires a privacy policy to be accessible from any form collecting personal data. Wix has a built-in privacy policy generator — Settings → Privacy Policy → Generate Policy → customise with company details → publish. Then add a link beneath the form: "By submitting this form you agree to our Privacy Policy." Link the words "Privacy Policy" to the published page. This is a legal requirement, not optional.</div>
+              <div class="task-badges"><span class="badge badge-high">Legal requirement</span><span class="badge badge-free">Free</span><span class="badge badge-quick">10 mins</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Update Bromyard development page</div>
+              <div class="task-desc">The Bromyard page currently states "Ready for occupation from Easter 2026" — that date has passed. Update immediately to reflect current status. If homes are still available update the copy with current availability. If all sold, update to show the development as completed and consider adding a "register interest for future developments" CTA. Stale date information damages credibility with visitors and signals outdated content to Google.</div>
+              <div class="task-badges"><span class="badge badge-high">Fix urgently</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add footer sitemap links</div>
+              <div class="task-desc">The footer currently has only Contact Us, About Us and Facebook. A text link list to all service pages gives Google an additional internal link to every page from every page on the site — and helps visitors who scroll to the bottom. In Wix: edit the footer → add a text element with links. Suggested footer link groups below.</div>
+              <div class="copy-block" style="margin-top:8px">
+                <div class="copy-label">Footer link structure — 3 columns</div>
+                <button class="copy-btn" onclick="copyText(this,'Services\nHouse Extensions Worcester\nHouse Extensions Malvern\nGarage Builders\nLoft Conversions\nLandscaping\nBuilding Renovations\n\nCompany\nAbout Us\nRecent Projects\nContact\nPrivacy Policy\n\nDevelopments\nBromyard Development\nWorcester Development')">Copy</button>
+                <strong>Services</strong><br>
+                House Extensions Worcester<br>
+                House Extensions Malvern<br>
+                Garage Builders<br>
+                Loft Conversions<br>
+                Landscaping<br>
+                Building Renovations<br><br>
+                <strong>Company</strong><br>
+                About Us · Recent Projects · Contact · Privacy Policy<br><br>
+                <strong>Developments</strong><br>
+                Bromyard Development · Worcester Development
+              </div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-technical">SEO signal</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Publish first blog post</div>
+              <div class="task-desc">None of the three planned blog posts are live yet. The cost guide will generate traffic almost immediately once indexed. In Wix: Blog → New Post. Use the title, content brief and target keyword from the Blog Posts tab in the Content &amp; SEO section. Aim for 600–800 words, include the phone number and a link to the relevant service page at the end.</div>
+              <div class="task-badges"><span class="badge badge-high">Traffic impact</span><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Create Instagram account and link to Facebook</div>
+              <div class="task-desc">Instagram account not yet set up. Go to instagram.com → Create account. Suggested username: @courtpropertydevelopers or @courtpropertyworcs. Bio: "Building extensions, garages &amp; homes across Worcester &amp; Malvern since 1997. Call 01905 831778." Once created, link to Facebook via Meta Business Suite → Linked Accounts — posts can then be shared to both simultaneously with no extra effort.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span></div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
   <!-- ===================================================== -->
   <!-- SECTION 1: VISUAL -->
   <!-- ===================================================== -->
@@ -463,16 +644,17 @@
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
-              <div class="task-title">Replace hero headline</div>
+              <div class="task-title">Update homepage H1</div>
+              <div class="task-desc">The current H1 doesn't contain the primary broad keyword. Update to the version below which contains "building contractors" and both location names — stronger for ranking on broad builder searches.</div>
               <div class="copy-block" style="margin-top:8px">
-                <div class="copy-label">New H1</div>
-                <button class="copy-btn" onclick="copyText(this,'Building Extensions & Quality Homes Across Worcester & Malvern')">Copy</button>
-                Building Extensions &amp; Quality Homes Across Worcester &amp; Malvern
+                <div class="copy-label">Updated H1 (recommended)</div>
+                <button class="copy-btn" onclick="copyText(this,'Building Contractors Serving Worcester & Malvern Since 1997')">Copy</button>
+                Building Contractors Serving Worcester &amp; Malvern Since 1997
               </div>
               <div class="copy-block">
-                <div class="copy-label">Subheading</div>
-                <button class="copy-btn" onclick="copyText(this,'Established 1997. Over 250 homes built. Fixed price. Quality guaranteed.')">Copy</button>
-                Established 1997. Over 250 homes built. Fixed price. Quality guaranteed.
+                <div class="copy-label">Updated subheading</div>
+                <button class="copy-btn" onclick="copyText(this,'House extensions, garages, loft conversions, landscaping and renovations. Fixed price contracts. Our own employed staff.')">Copy</button>
+                House extensions, garages, loft conversions, landscaping and renovations. Fixed price contracts. Our own employed staff.
               </div>
               <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-high">Critical change</span></div>
             </div>
@@ -531,7 +713,8 @@
       <button class="sub-btn" onclick="goContentPage(7)">About Page</button>
       <button class="sub-btn" onclick="goContentPage(8)">Building Contractors</button>
       <button class="sub-btn" onclick="goContentPage(9)">Contact</button>
-      <button class="sub-btn" onclick="goContentPage(10)">Blog Posts</button>
+      <button class="sub-btn" onclick="goContentPage(10)">Schema Markup</button>
+      <button class="sub-btn" onclick="goContentPage(11)">Blog Posts</button>
     </div>
 
     <!-- PAGE 0: HOMEPAGE -->
@@ -1816,8 +1999,424 @@ Most projects move from first enquiry to quotation within 7–10 days.</div>
 
     </div>
 
-    <!-- BLOG POSTS -->
+    <!-- PAGE 10: SCHEMA MARKUP -->
     <div class="content-page" id="cp-10">
+      <div class="page-intro">
+        <h3>Schema Markup</h3>
+        <div class="pi-meta">
+          <span class="pi-pill pill-navy">Added via Wix Custom Code</span>
+          <span class="pi-pill pill-gold">Helps Google &amp; AI search tools</span>
+          <span class="pi-pill pill-green">FAQPage schema unlocks expandable search results</span>
+        </div>
+        <p>Schema markup is JSON-LD code added to the head of each page. It tells Google and AI search tools (ChatGPT, Perplexity, Google AI Overviews) exactly what the content means. In Wix: Settings → Custom Code → Add Code → paste the code → set to "Head" → select "Specific pages" → choose the relevant page. Do this for each page separately.</p>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">LocalBusiness schema — add to homepage only</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">This tells Google exactly what type of business Court Property is, where it is, what it does and how to contact it. Add to the homepage only — once is enough for the whole site.</div>
+          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Homepage only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Court Property Developers Ltd",
+  "description": "Established building contractors covering Worcester, Malvern and Worcestershire since 1997. House extensions, garages, loft conversions, landscaping and renovations. NHBC A1 rated.",
+  "url": "https://www.courtproperty.co.uk",
+  "telephone": "01905831778",
+  "email": "info@courtproperty.co.uk",
+  "foundingDate": "1997",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Priors Court, Lower Ferry Lane",
+    "addressLocality": "Callow End",
+    "addressRegion": "Worcester",
+    "postalCode": "WR2 4TJ",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.1234,
+    "longitude": -2.2456
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": [
+    "Worcester", "Great Malvern", "Malvern", "Worcestershire",
+    "Droitwich", "Pershore", "Upton upon Severn", "Kidderminster",
+    "Bromsgrove", "Redditch", "Evesham"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Building Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "House Extensions Worcester"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garage Building"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Loft Conversions"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscaping"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Building Renovations"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "New Build Homes"}}
+    ]
+  },
+  "sameAs": ["https://www.facebook.com/courtproperty"]
+}
+&lt;/script&gt;</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Extensions Worcester page</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">Add to the House Extensions Worcester page only. This can trigger expandable FAQ results directly in Google search — significantly increasing the space the listing takes up and click-through rate.</div>
+          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → House Extensions Worcester page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a house extension cost in Worcester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single storey extension in Worcester typically costs between £1,500 and £2,200 per square metre depending on specification and complexity. A well-specified 25m² kitchen extension might cost £45,000–£55,000 fully completed. We provide detailed fixed price quotations at no charge — call 01905 831778 to arrange a site visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need planning permission for an extension in Worcester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many single storey extensions in Worcester can be built under Permitted Development rights without a full planning application. For detached houses, a rear extension up to 4 metres deep generally qualifies. For semi-detached and terraced properties the limit is 3 metres. Properties in conservation areas face additional restrictions. We advise on planning requirements as part of our free initial consultation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build an extension in Worcester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single storey rear extension typically takes 10 to 14 weeks from groundwork to completion. Double storey extensions generally take 16 to 24 weeks. We provide a written programme before starting so you know exactly what to expect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas around Worcester do you cover for extension work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We cover the full Worcester area including Barbourne, St Johns, Claines, Fernhill Heath, Droitwich, Pershore, Upton upon Severn and all surrounding Worcestershire villages within approximately 25 miles of our Callow End base."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Extensions Malvern page</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → House Extensions Malvern page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a house extension cost in Malvern?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extension costs in Malvern are broadly similar to the wider Worcestershire market — typically £1,500 to £2,200 per square metre for a single storey build. Older Victorian properties may involve additional costs for matching materials. We provide fixed price quotations at no charge — call 01905 831778."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I extend my house in the Great Malvern Conservation Area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — extensions within the Great Malvern Conservation Area are possible but typically require planning permission rather than Permitted Development. Malvern Hills District Council considers scale, design and materials carefully. Well-designed extensions using sympathetic materials are regularly approved. We advise on the planning approach as part of a free site visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work on rural properties around Malvern?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — a significant proportion of our Malvern work is on rural and village properties. We are comfortable with restricted access, older construction methods including stone walls, solid floors and lime mortar, and the logistics of rural sites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far from Malvern do you work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our base in Callow End is approximately 3 miles from Great Malvern. We cover all of the Malvern Hills district extending to Upton upon Severn, Pershore, Ledbury and into Herefordshire. Call 01905 831778 to discuss your location."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Garage Builders page</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Garage Builders page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to build a garage in Worcester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A new single masonry garage in Worcester typically costs £20,000–£28,000 fully completed. A double garage is typically £32,000–£45,000 depending on size and specification. These are substantially higher than timber kit alternatives but a masonry garage adds real lasting value to your property. We provide fixed price quotations at no charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need planning permission to build a garage in Worcestershire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases a new detached garage in Worcestershire can be built under Permitted Development without full planning permission, provided conditions on size, height and positioning are met. Rules are more restrictive in conservation areas. We advise on the planning position as part of our free site visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a new garage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A new single or double masonry garage typically takes 4 to 7 weeks from groundwork to completion. Garages requiring planning permission will have that timescale added — planning applications in Worcestershire currently take around 8 weeks for straightforward projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you match the brickwork of my existing house?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — matching materials is something we prioritise on every garage project. We source matching brick, block and roof tile from our established supplier network across Worcestershire, including period-appropriate materials for Victorian and Edwardian properties."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Loft Conversions page</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Loft Conversions page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a loft conversion cost in Worcester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A roof light loft conversion in Worcester typically costs £25,000–£38,000 fully completed. A dormer loft conversion typically ranges from £38,000–£60,000 depending on size and whether an en-suite is included. All quotations are fixed price. Call 01905 831778 to arrange a free site assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my loft suitable for conversion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The two key factors are headroom and roof structure. You generally need at least 2.2 metres from floor to ridge for a dormer conversion, or 2.5 metres for a roof light conversion. Traditional cut rafter roofs (pre-1960s) are straightforward to convert. Trussed rafter roofs are more complex but still convertible. We assess suitability at no charge during our initial site visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a loft conversion take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A roof light conversion typically takes 5 to 8 weeks. A dormer conversion usually takes 8 to 12 weeks. Loft conversions are generally less disruptive than ground floor extensions — most structural work happens at roof level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you carry out loft conversions across Malvern as well as Worcester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we cover the full Worcestershire area including Worcester, Great Malvern, Malvern Wells, Droitwich, Pershore and surrounding villages. Properties in Great Malvern's conservation area may need planning permission for dormers even where Permitted Development might otherwise apply."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Landscaping page</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Landscaping page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What size of landscaping project do you take on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We focus on larger scale external works — projects involving significant earthmoving, retaining structures over 600mm, major driveway installations, or budgets above approximately £15,000. Smaller decorative garden work is better served by a specialist landscaping company."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install drainage as part of landscaping work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — drainage is frequently a key component of our external works projects. This includes surface water drainage, soakaway installation, inspection chambers and connection to existing drainage systems across Worcester and Malvern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does landscaping cost in Worcestershire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A substantial block-paved driveway might cost £12,000–£20,000. A terracing scheme with retaining walls could range from £20,000 to £60,000 or more. We provide fully itemised fixed price quotations after a site visit. Call 01905 831778."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you combine landscaping with an extension project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — and this is often the most cost-effective approach. With groundwork machinery already on site for an extension or garage, adding driveway or terracing work saves significantly on mobilisation costs. We discuss external works as part of every extension quotation."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Renovations page</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Renovations page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a house renovation cost in Worcester?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single room renovation typically costs £8,000–£25,000. A full house renovation might range from £40,000–£150,000 or more depending on property size and finish standard. We provide fully itemised fixed price quotations after a thorough site assessment. Call 01905 831778."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need building regulations approval for renovation work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cosmetic renovations generally do not require building regulations approval. However structural alterations, electrical rewires, new bathrooms with drainage alterations, and changes affecting fire safety typically do require sign-off. We advise on what requires approval as part of every project consultation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a house renovation take in Worcestershire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A kitchen or bathroom renovation typically takes 2 to 4 weeks. A partial renovation of several rooms might take 6 to 10 weeks. A full house renovation is usually 3 to 6 months. We provide a written programme broken down by stage before any project starts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you renovate a property while tenants are in occupation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have experience carrying out phased renovation programmes on occupied properties for landlords needing to minimise void periods. Whether this is achievable depends on the scope of work — we advise honestly during our initial site visit."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">How to add schema in Wix — step by step</span><span class="block-chevron">▼</span></div>
+        <div class="block-body">
+          <div class="info-box">Each schema block above must be added to its specific page separately — not sitewide. The LocalBusiness schema goes on the homepage only. Each FAQPage schema goes on its own service page.</div>
+          <ul class="task-list">
+            <li class="task-item">
+              <div class="task-check" onclick="toggleTask(this)"></div>
+              <div class="task-content">
+                <div class="task-title">Add LocalBusiness schema to homepage</div>
+                <div class="task-desc">In Wix: Settings → Custom Code → Add Custom Code → paste the LocalBusiness script → Code placement: Head → Add to: Specific pages → select Home → Apply</div>
+                <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
+              </div>
+            </li>
+            <li class="task-item">
+              <div class="task-check" onclick="toggleTask(this)"></div>
+              <div class="task-content">
+                <div class="task-title">Add FAQPage schema to Extensions Worcester</div>
+                <div class="task-desc">Same process as above — select the House Extensions Worcester page specifically</div>
+                <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
+              </div>
+            </li>
+            <li class="task-item">
+              <div class="task-check" onclick="toggleTask(this)"></div>
+              <div class="task-content">
+                <div class="task-title">Add FAQPage schema to Extensions Malvern</div>
+                <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
+              </div>
+            </li>
+            <li class="task-item">
+              <div class="task-check" onclick="toggleTask(this)"></div>
+              <div class="task-content">
+                <div class="task-title">Add FAQPage schema to Garage Builders page</div>
+                <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
+              </div>
+            </li>
+            <li class="task-item">
+              <div class="task-check" onclick="toggleTask(this)"></div>
+              <div class="task-content">
+                <div class="task-title">Add FAQPage schema to Loft Conversions page</div>
+                <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
+              </div>
+            </li>
+            <li class="task-item">
+              <div class="task-check" onclick="toggleTask(this)"></div>
+              <div class="task-content">
+                <div class="task-title">Add FAQPage schema to Landscaping page</div>
+                <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
+              </div>
+            </li>
+            <li class="task-item">
+              <div class="task-check" onclick="toggleTask(this)"></div>
+              <div class="task-content">
+                <div class="task-title">Add FAQPage schema to Renovations page</div>
+                <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
+              </div>
+            </li>
+            <li class="task-item">
+              <div class="task-check" onclick="toggleTask(this)"></div>
+              <div class="task-content">
+                <div class="task-title">Validate all schema using Google's Rich Results Test</div>
+                <div class="task-desc">After adding each schema block, go to search.google.com/test/rich-results → paste the page URL → run the test. It will confirm the schema is valid and show a preview of how the enhanced result may appear in Google search. Fix any errors flagged before moving on.</div>
+                <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-technical">Technical</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG POSTS -->
+    <div class="content-page" id="cp-11">
       <div class="page-intro">
         <h3>Blog Posts — 3 Priority Articles</h3>
         <div class="pi-meta">
