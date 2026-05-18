@@ -398,35 +398,31 @@
         </div>
       </div>
     </div>
-  </div>
 
     <div class="phase-block">
       <div class="phase-header" onclick="togglePhase(this)">
         <div class="phase-num num-purple">5</div>
-        <div class="phase-title-wrap"><div class="phase-title">Remaining actions — outstanding items from site audit</div><div class="phase-meta">Items identified from reviewing the live site — all still to complete</div></div>
+        <div class="phase-title-wrap"><div class="phase-title">Outstanding fixes — identified from live site audit</div><div class="phase-meta">Issues found when reviewing the live site — action these now</div></div>
         <div class="phase-chevron">▼</div>
       </div>
       <div class="phase-body">
         <ul class="task-list">
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Add FAQ sections to all service pages</div>
-              <div class="task-desc">Extensions Worcester is missing its FAQ section. Check all other service pages too. In Wix: Add Element → Accordion — add each question as a row. Copy the FAQ content from the relevant page in the Content &amp; SEO tab above. The accordion widget is sufficient for Google to read the content — but add FAQPage schema markup on top (see Schema task below) to unlock expandable questions in search results.</div>
+              <div class="task-desc">Extensions Worcester is missing its FAQ section. Check all other service pages too. In Wix: Add Element → Accordion — add each question as a row. Copy the FAQ content from the relevant page in the Content &amp; SEO tab. FAQPage schema markup (see Phase 6) then unlocks expandable questions in Google search results on top of this.</div>
               <div class="task-badges"><span class="badge badge-high">High SEO impact</span><span class="badge badge-free">Free</span></div>
             </div>
           </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Add Side Extensions H2 section to Extensions Worcester page</div>
-              <div class="task-desc">The fourth H2 section — "Side Extensions and Wraparound Extensions" — is missing from the live page. Copy the content from the Extensions Worcester tab in Content &amp; SEO and add it after the Rear Extensions section.</div>
+              <div class="task-desc">The fourth H2 — "Side Extensions and Wraparound Extensions" — is missing from the live page. Copy the content from the Extensions Worcester tab in Content &amp; SEO and add it after the Rear Extensions section.</div>
               <div class="task-badges"><span class="badge badge-content">Content</span><span class="badge badge-free">Free</span></div>
             </div>
           </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
@@ -435,145 +431,136 @@
               <div class="task-badges"><span class="badge badge-high">Fix urgently</span><span class="badge badge-quick">2 mins</span></div>
             </div>
           </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
-              <div class="task-title">Fill in "Areas We Cover" section on the contact page</div>
-              <div class="task-desc">There is an H2 heading with no content beneath it. Either add the coverage copy from the contact page in the Content &amp; SEO tab, or delete the heading entirely.</div>
+              <div class="task-title">Fill in "Areas We Cover" on the contact page</div>
+              <div class="task-desc">There is an H2 heading with no content beneath it. Add the coverage paragraph or delete the heading.</div>
               <div class="copy-block" style="margin-top:8px">
-                <div class="copy-label">Coverage copy to add beneath the heading</div>
+                <div class="copy-label">Coverage copy to paste beneath the heading</div>
                 <button class="copy-btn" onclick="copyText(this,'We cover Worcester, Malvern and the wider Worcestershire area including Droitwich, Pershore, Upton upon Severn, Kidderminster and surrounding towns and villages. See our About page for a full list of areas covered.')">Copy</button>
                 We cover Worcester, Malvern and the wider Worcestershire area including Droitwich, Pershore, Upton upon Severn, Kidderminster and surrounding towns and villages. See our About page for a full list of areas covered.
               </div>
               <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
             </div>
           </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Add "People Behind the Work" section to About page</div>
-              <div class="task-desc">The About page is missing the personal section naming the founders. This is the most trust-building section on the page. Google responds to named individuals — anonymous corporate copy ranks less well than content that names real people. Add a section with the directors' names, background and personal approach. See the About page tab in Content &amp; SEO for the template.</div>
-              <div class="task-badges"><span class="badge badge-high">Trust signal</span><span class="badge badge-free">Free</span></div>
+              <div class="task-desc">The About page is missing the personal section naming the founders. Google responds to named individuals — anonymous corporate copy ranks less well. Add a section with directors' names, background and personal approach. See the About page tab in Content &amp; SEO for the template.</div>
+              <div class="task-badges"><span class="badge badge-high">Major trust signal</span><span class="badge badge-free">Free</span></div>
             </div>
           </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
-              <div class="task-title">Add Google Reviews to homepage and contact page</div>
-              <div class="task-desc">20 five-star Google reviews is a significant asset currently only visible on the Google Business Profile. Pull them onto the site using the Elfsight Google Reviews widget. Go to elfsight.com → Google Reviews widget → connect your Google Business Profile → copy the embed code → In Wix: Add Element → Embed → Custom Code → paste the code. Place on the homepage below the service cards grid, and on the contact page alongside the enquiry form. Free tier available — approximately £5/month to remove the Elfsight badge.</div>
-              <div class="task-badges"><span class="badge badge-high">High conversion impact</span></div>
+              <div class="task-title">Update Bromyard development page</div>
+              <div class="task-desc">The page states "Ready for occupation from Easter 2026" — that date has passed. Update to reflect current availability. If all sold, mark the development as completed and add a "register interest for future developments" CTA. Stale dates damage credibility with both visitors and Google.</div>
+              <div class="task-badges"><span class="badge badge-high">Fix urgently</span></div>
             </div>
           </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Fix CTA button — link to /contact, not tel:</div>
+              <div class="task-desc">The gold "Get a Free Quote" button triggers a phone call on desktop which opens the phone app unexpectedly. Link the button to /contact instead. Keep the phone number itself as the dial link separately. In Wix: click the button → Link → Web Address → https://www.courtproperty.co.uk/contact</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add Open Graph images to all pages</div>
+              <div class="task-desc">When pages are shared on Facebook, WhatsApp or LinkedIn the preview shows no image. In Wix: go to each page → SEO Settings → Social Share → upload the hero image for that page. Takes 2 minutes per page.</div>
+              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">2 mins per page</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add privacy policy link to contact form</div>
+              <div class="task-desc">The privacy policy page is now live. Add a line beneath the contact form: "By submitting this form you agree to our Privacy Policy." Link the words "Privacy Policy" to /privacy-policy. This is a legal requirement under GDPR.</div>
+              <div class="task-badges"><span class="badge badge-high">Legal requirement</span><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="phase-block">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num num-green">6</div>
+        <div class="phase-title-wrap"><div class="phase-title">Ongoing improvements — next steps to keep building rankings</div><div class="phase-meta">These are not urgent fixes — work through them in order</div></div>
+        <div class="phase-chevron">▼</div>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check" onclick="toggleTask(this)"></div>
+            <div class="task-content">
+              <div class="task-title">Add Google Reviews widget to homepage and contact page</div>
+              <div class="task-desc">20 five-star reviews is a significant asset currently only visible on the Google Business Profile. Add via Elfsight: go to elfsight.com → Google Reviews widget → connect Google Business Profile → copy embed code → In Wix: Add Element → Embed → Custom Code → paste. Place on the homepage below service cards, and on the contact page alongside the enquiry form. Free tier available — ~£5/month to remove the Elfsight badge.</div>
+              <div class="task-badges"><span class="badge badge-high">Conversion impact</span></div>
+            </div>
+          </li>
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Add NHBC A1 rating to homepage stats bar and service page trust sections</div>
-              <div class="task-desc">Court Property holds the NHBC A1 rating — the highest of 16 contractor ratings. This is rare for a company of this size and is a powerful differentiator. Currently only mentioned on the About page. Add to: (1) homepage stats bar alongside Established 1997 and 250+ Homes, (2) every service page trust section. Always include the explanation — most visitors won't know what it means without context.</div>
+              <div class="task-desc">Currently only mentioned once on the About page. The NHBC A1 rating is the highest of 16 contractor ratings — rare for a company of this size. Add to the homepage stats bar and to the trust section on every service page. Always include the explanation alongside it.</div>
               <div class="copy-block" style="margin-top:8px">
-                <div class="copy-label">How to display it in the stats bar</div>
-                <button class="copy-btn" onclick="copyText(this,'NHBC A1 Rated — the highest of 16 contractor ratings')">Copy</button>
-                NHBC A1 Rated — the highest of 16 contractor ratings
+                <div class="copy-label">Stats bar label</div>
+                <button class="copy-btn" onclick="copyText(this,'NHBC A1 Rated — highest of 16 contractor ratings')">Copy</button>
+                NHBC A1 Rated — highest of 16 contractor ratings
               </div>
               <div class="copy-block">
-                <div class="copy-label">How to reference it in service page trust sections</div>
+                <div class="copy-label">Service page trust section copy</div>
                 <button class="copy-btn" onclick="copyText(this,'Court Property is registered with NHBC with an A1 rating — the highest of 16 contractor ratings, awarded based on build quality, claims history and financial standing.')">Copy</button>
                 Court Property is registered with NHBC with an A1 rating — the highest of 16 contractor ratings, awarded based on build quality, claims history and financial standing.
               </div>
               <div class="task-badges"><span class="badge badge-high">Major trust signal</span><span class="badge badge-free">Free</span></div>
             </div>
           </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
-              <div class="task-title">Add schema markup — FAQPage and LocalBusiness</div>
-              <div class="task-desc">Schema markup is structured data that tells Google and AI search tools (ChatGPT, Perplexity, Google AI Overviews) exactly what the content means. FAQPage schema can trigger expandable questions directly in Google search results. LocalBusiness schema ensures Google and AI tools represent the business correctly in answers. In Wix: Settings → Custom Code → Add Code → paste the JSON-LD → set to Head → select the relevant page. See the Schema tab in the Content &amp; SEO section for the ready-to-paste code for each page.</div>
+              <div class="task-title">Add schema markup — see Schema Markup tab in Content &amp; SEO</div>
+              <div class="task-desc">FAQPage schema unlocks expandable questions in Google search results. LocalBusiness schema helps AI search tools represent the business correctly. All code is ready to paste in the Schema Markup tab. In Wix: Settings → Custom Code → Add Code → paste → Head → select the specific page.</div>
               <div class="task-badges"><span class="badge badge-high">AI search visibility</span><span class="badge badge-technical">Technical</span></div>
             </div>
           </li>
-
-          <li class="task-item">
-            <div class="task-check" onclick="toggleTask(this)"></div>
-            <div class="task-content">
-              <div class="task-title">Add Open Graph images to all pages</div>
-              <div class="task-desc">When pages are shared on Facebook, WhatsApp or LinkedIn the preview currently shows no image — just text. In Wix: go to each page → SEO Settings → Social Share → upload the hero image used on that page. Use the same image that appears at the top of the page. This takes about 2 minutes per page and means every shared link looks professional rather than blank.</div>
-              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">2 mins per page</span></div>
-            </div>
-          </li>
-
-          <li class="task-item">
-            <div class="task-check" onclick="toggleTask(this)"></div>
-            <div class="task-content">
-              <div class="task-title">Fix CTA button — link to /contact on desktop, not tel:</div>
-              <div class="task-desc">The gold "Get a Free Quote" button currently triggers a phone call (tel: link) which is unexpected on desktop — it opens the default phone app or throws an error. On mobile this is fine. Best fix: link the CTA button to /contact on all devices. Keep the phone number itself as the dial link separately. In Wix: click the button → Link → Web Address → https://www.courtproperty.co.uk/contact</div>
-              <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-quick">5 mins</span></div>
-            </div>
-          </li>
-
-          <li class="task-item">
-            <div class="task-check" onclick="toggleTask(this)"></div>
-            <div class="task-content">
-              <div class="task-title">Add privacy policy and link from contact form</div>
-              <div class="task-desc">The contact form collects name, email and phone number. GDPR requires a privacy policy to be accessible from any form collecting personal data. Wix has a built-in privacy policy generator — Settings → Privacy Policy → Generate Policy → customise with company details → publish. Then add a link beneath the form: "By submitting this form you agree to our Privacy Policy." Link the words "Privacy Policy" to the published page. This is a legal requirement, not optional.</div>
-              <div class="task-badges"><span class="badge badge-high">Legal requirement</span><span class="badge badge-free">Free</span><span class="badge badge-quick">10 mins</span></div>
-            </div>
-          </li>
-
-          <li class="task-item">
-            <div class="task-check" onclick="toggleTask(this)"></div>
-            <div class="task-content">
-              <div class="task-title">Update Bromyard development page</div>
-              <div class="task-desc">The Bromyard page currently states "Ready for occupation from Easter 2026" — that date has passed. Update immediately to reflect current status. If homes are still available update the copy with current availability. If all sold, update to show the development as completed and consider adding a "register interest for future developments" CTA. Stale date information damages credibility with visitors and signals outdated content to Google.</div>
-              <div class="task-badges"><span class="badge badge-high">Fix urgently</span></div>
-            </div>
-          </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Add footer sitemap links</div>
-              <div class="task-desc">The footer currently has only Contact Us, About Us and Facebook. A text link list to all service pages gives Google an additional internal link to every page from every page on the site — and helps visitors who scroll to the bottom. In Wix: edit the footer → add a text element with links. Suggested footer link groups below.</div>
+              <div class="task-desc">Currently only Contact Us, About Us and Facebook in the footer. Add text links to all service pages — gives Google an internal link to every page from every page on the site.</div>
               <div class="copy-block" style="margin-top:8px">
-                <div class="copy-label">Footer link structure — 3 columns</div>
-                <button class="copy-btn" onclick="copyText(this,'Services\nHouse Extensions Worcester\nHouse Extensions Malvern\nGarage Builders\nLoft Conversions\nLandscaping\nBuilding Renovations\n\nCompany\nAbout Us\nRecent Projects\nContact\nPrivacy Policy\n\nDevelopments\nBromyard Development\nWorcester Development')">Copy</button>
-                <strong>Services</strong><br>
-                House Extensions Worcester<br>
-                House Extensions Malvern<br>
-                Garage Builders<br>
-                Loft Conversions<br>
-                Landscaping<br>
-                Building Renovations<br><br>
-                <strong>Company</strong><br>
-                About Us · Recent Projects · Contact · Privacy Policy<br><br>
-                <strong>Developments</strong><br>
-                Bromyard Development · Worcester Development
+                <div class="copy-label">Suggested footer link structure — 3 columns</div>
+                <button class="copy-btn" onclick="copyText(this,'Services: House Extensions Worcester · House Extensions Malvern · Garage Builders · Loft Conversions · Landscaping · Building Renovations · Building Contractors Worcester\n\nCompany: About Us · Recent Projects · Contact · Privacy Policy\n\nDevelopments: Bromyard Development · Worcester Development')">Copy</button>
+                <strong>Services:</strong> House Extensions Worcester · House Extensions Malvern · Garage Builders · Loft Conversions · Landscaping · Building Renovations<br><br>
+                <strong>Company:</strong> About Us · Recent Projects · Contact · Privacy Policy<br><br>
+                <strong>Developments:</strong> Bromyard Development · Worcester Development
               </div>
               <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-technical">SEO signal</span></div>
             </div>
           </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Publish first blog post</div>
-              <div class="task-desc">None of the three planned blog posts are live yet. The cost guide will generate traffic almost immediately once indexed. In Wix: Blog → New Post. Use the title, content brief and target keyword from the Blog Posts tab in the Content &amp; SEO section. Aim for 600–800 words, include the phone number and a link to the relevant service page at the end.</div>
+              <div class="task-desc">None of the three planned blog posts are live yet. The cost guide will start generating traffic almost immediately once indexed. In Wix: Blog → New Post. Title, content brief and target keyword are in the Blog Posts tab in Content &amp; SEO. Aim for 600–800 words, include phone number and a link to the relevant service page at the end.</div>
               <div class="task-badges"><span class="badge badge-high">Traffic impact</span><span class="badge badge-free">Free</span></div>
             </div>
           </li>
-
           <li class="task-item">
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Create Instagram account and link to Facebook</div>
-              <div class="task-desc">Instagram account not yet set up. Go to instagram.com → Create account. Suggested username: @courtpropertydevelopers or @courtpropertyworcs. Bio: "Building extensions, garages &amp; homes across Worcester &amp; Malvern since 1997. Call 01905 831778." Once created, link to Facebook via Meta Business Suite → Linked Accounts — posts can then be shared to both simultaneously with no extra effort.</div>
+              <div class="task-desc">Go to instagram.com → Create account. Username: @courtpropertydevelopers or @courtpropertyworcs. Bio: "Building extensions, garages &amp; homes across Worcester &amp; Malvern since 1997. Call 01905 831778." Link to Facebook via Meta Business Suite → Linked Accounts — posts then go to both simultaneously with no extra effort.</div>
               <div class="task-badges"><span class="badge badge-free">Free</span></div>
             </div>
           </li>
-
         </ul>
       </div>
     </div>
