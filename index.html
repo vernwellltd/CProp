@@ -411,7 +411,7 @@
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Add FAQ sections to all service pages</div>
-              <div class="task-desc">Extensions Worcester is missing its FAQ section. Check all other service pages too. In Wix: Add Element → Accordion — add each question as a row. Copy the FAQ content from the relevant page in the Content &amp; SEO tab. FAQPage schema markup (see Phase 6) then unlocks expandable questions in Google search results on top of this.</div>
+              <div class="task-desc">Extensions Worcester is missing its FAQ section. Check all other service pages too. In Wix: Add Element → Accordion — add each question as a row. Copy the FAQ content from the relevant page in the Content &amp; SEO tab. Adding the FAQ as plain text is sufficient — FAQPage schema has been deprecated by Google as of May 2026 and no longer appears in search results.</div>
               <div class="task-badges"><span class="badge badge-high">High SEO impact</span><span class="badge badge-free">Free</span></div>
             </div>
           </li>
@@ -526,7 +526,7 @@
             <div class="task-check" onclick="toggleTask(this)"></div>
             <div class="task-content">
               <div class="task-title">Add schema markup — see Schema Markup tab in Content &amp; SEO</div>
-              <div class="task-desc">FAQPage schema unlocks expandable questions in Google search results. LocalBusiness schema helps AI search tools represent the business correctly. All code is ready to paste in the Schema Markup tab. In Wix: Settings → Custom Code → Add Code → paste → Head → select the specific page.</div>
+              <div class="task-desc">LocalBusiness schema tells Google and AI tools exactly what the business is, where it is, and what it offers. Service schema on each page reinforces local relevance. FAQPage schema has been deprecated by Google (May 2026) and is not included. All ready-to-paste code is in the Schema Markup tab. In Wix: Settings → Custom Code → Add Code → paste → Head → select the specific page.</div>
               <div class="task-badges"><span class="badge badge-high">AI search visibility</span><span class="badge badge-technical">Technical</span></div>
             </div>
           </li>
@@ -1993,15 +1993,15 @@ Most projects move from first enquiry to quotation within 7–10 days.</div>
         <div class="pi-meta">
           <span class="pi-pill pill-navy">Added via Wix Custom Code</span>
           <span class="pi-pill pill-gold">Helps Google &amp; AI search tools</span>
-          <span class="pi-pill pill-green">FAQPage schema unlocks expandable search results</span>
+          <span class="pi-pill pill-green">LocalBusiness &amp; Service schema — FAQPage deprecated May 2026</span>
         </div>
-        <p>Schema markup is JSON-LD code added to the head of each page. It tells Google and AI search tools (ChatGPT, Perplexity, Google AI Overviews) exactly what the content means. In Wix: Settings → Custom Code → Add Code → paste the code → set to "Head" → select "Specific pages" → choose the relevant page. Do this for each page separately.</p>
+        <p>Schema markup is JSON-LD code added to the head of each page. It tells Google and AI search tools exactly what the content means. <strong>Note: FAQPage schema was deprecated by Google on 7 May 2026 and no longer produces enhanced search results — it has been removed from this guide.</strong> The two schema types below are still active and worth adding: LocalBusiness (homepage) and Service (each service page). In Wix: Settings → Custom Code → Add Code → paste → Head → Specific pages → choose the relevant page.</p>
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">LocalBusiness schema — add to homepage only</span><span class="block-chevron">▼</span></div>
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">LocalBusiness schema — homepage only</span><span class="block-chevron">▼</span></div>
         <div class="block-body">
-          <div class="info-box">This tells Google exactly what type of business Court Property is, where it is, what it does and how to contact it. Add to the homepage only — once is enough for the whole site.</div>
+          <div class="info-box">Add to the homepage only. Tells Google and AI search tools (ChatGPT, Perplexity, Google AI Overviews) exactly what the business is, where it is, what it does and how to contact it. In Wix: Settings → Custom Code → Add Custom Code → paste below → Head → Homepage only → Apply.</div>
           <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Homepage only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
 {
   "@context": "https://schema.org",
@@ -2019,11 +2019,6 @@ Most projects move from first enquiry to quotation within 7–10 days.</div>
     "addressRegion": "Worcester",
     "postalCode": "WR2 4TJ",
     "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 52.1234,
-    "longitude": -2.2456
   },
   "openingHoursSpecification": [
     {
@@ -2057,343 +2052,192 @@ Most projects move from first enquiry to quotation within 7–10 days.</div>
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Extensions Worcester page</span><span class="block-chevron">▼</span></div>
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">Service schema — one per service page</span><span class="block-chevron">▼</span></div>
         <div class="block-body">
-          <div class="info-box">Add to the House Extensions Worcester page only. This can trigger expandable FAQ results directly in Google search — significantly increasing the space the listing takes up and click-through rate.</div>
-          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → House Extensions Worcester page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+          <div class="info-box">Add a Service schema block to each service page. This explicitly tells Google what service is being offered and where — reinforcing local relevance. Use a separate Custom Code entry for each page. The template below shows the pattern — change the name, description and URL for each page.</div>
+          <div class="copy-area"><span class="copy-label">Extensions Worcester — paste into Custom Code → Head → that page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does a house extension cost in Worcester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A single storey extension in Worcester typically costs between £1,500 and £2,200 per square metre depending on specification and complexity. A well-specified 25m² kitchen extension might cost £45,000–£55,000 fully completed. We provide detailed fixed price quotations at no charge — call 01905 831778 to arrange a site visit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need planning permission for an extension in Worcester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Many single storey extensions in Worcester can be built under Permitted Development rights without a full planning application. For detached houses, a rear extension up to 4 metres deep generally qualifies. For semi-detached and terraced properties the limit is 3 metres. Properties in conservation areas face additional restrictions. We advise on planning requirements as part of our free initial consultation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does it take to build an extension in Worcester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A single storey rear extension typically takes 10 to 14 weeks from groundwork to completion. Double storey extensions generally take 16 to 24 weeks. We provide a written programme before starting so you know exactly what to expect."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What areas around Worcester do you cover for extension work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We cover the full Worcester area including Barbourne, St Johns, Claines, Fernhill Heath, Droitwich, Pershore, Upton upon Severn and all surrounding Worcestershire villages within approximately 25 miles of our Callow End base."
-      }
-    }
-  ]
+  "@type": "Service",
+  "serviceType": "House Extensions",
+  "name": "House Extension Builders Worcester",
+  "description": "Single storey, double storey and rear house extensions across Worcester and Worcestershire. Fixed price contracts. Established 1997.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Court Property Developers Ltd",
+    "telephone": "01905831778",
+    "url": "https://www.courtproperty.co.uk"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Worcester"
+  },
+  "url": "https://www.courtproperty.co.uk/house-extensions-worcester"
+}
+&lt;/script&gt;</div>
+          <div class="copy-area"><span class="copy-label">Extensions Malvern — paste into Custom Code → Head → that page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "House Extensions",
+  "name": "House Extension Builders Malvern",
+  "description": "House extensions across Great Malvern, Malvern Hills and surrounding villages. Conservation area experience. Fixed price. Established 1997.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Court Property Developers Ltd",
+    "telephone": "01905831778",
+    "url": "https://www.courtproperty.co.uk"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Great Malvern"
+  },
+  "url": "https://www.courtproperty.co.uk/house-extensions-malvern"
+}
+&lt;/script&gt;</div>
+          <div class="copy-area"><span class="copy-label">Garage Builders — paste into Custom Code → Head → that page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Garage Building",
+  "name": "Garage Builders Worcester and Malvern",
+  "description": "New single and double garages, garage extensions and masonry outbuildings across Worcester, Malvern and Worcestershire. Fixed price. Established 1997.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Court Property Developers Ltd",
+    "telephone": "01905831778",
+    "url": "https://www.courtproperty.co.uk"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Worcestershire"
+  },
+  "url": "https://www.courtproperty.co.uk/garage-builders-worcester"
+}
+&lt;/script&gt;</div>
+          <div class="copy-area"><span class="copy-label">Loft Conversions — paste into Custom Code → Head → that page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Loft Conversion",
+  "name": "Loft Conversions Worcester and Malvern",
+  "description": "Dormer and roof light loft conversions across Worcester, Malvern and Worcestershire. Structural expertise from an established local builder.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Court Property Developers Ltd",
+    "telephone": "01905831778",
+    "url": "https://www.courtproperty.co.uk"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Worcestershire"
+  },
+  "url": "https://www.courtproperty.co.uk/loft-conversions-worcestershire"
+}
+&lt;/script&gt;</div>
+          <div class="copy-area"><span class="copy-label">Landscaping — paste into Custom Code → Head → that page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Landscaping",
+  "name": "Landscaping Contractors Worcester and Malvern",
+  "description": "Large scale landscaping, driveways, retaining walls, terracing and groundworks across Worcester, Malvern and Worcestershire.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Court Property Developers Ltd",
+    "telephone": "01905831778",
+    "url": "https://www.courtproperty.co.uk"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Worcestershire"
+  },
+  "url": "https://www.courtproperty.co.uk/landscaping-worcestershire"
+}
+&lt;/script&gt;</div>
+          <div class="copy-area"><span class="copy-label">Renovations — paste into Custom Code → Head → that page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Building Renovation",
+  "name": "Building Renovations Worcester and Malvern",
+  "description": "Building renovations large and small across Worcester, Malvern and Worcestershire. Full house refurbishments, structural alterations and room renovations. Established 1997.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Court Property Developers Ltd",
+    "telephone": "01905831778",
+    "url": "https://www.courtproperty.co.uk"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Worcestershire"
+  },
+  "url": "https://www.courtproperty.co.uk/building-renovations-worcestershire"
 }
 &lt;/script&gt;</div>
         </div>
       </div>
 
       <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Extensions Malvern page</span><span class="block-chevron">▼</span></div>
+        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">How to add in Wix — step by step</span><span class="block-chevron">▼</span></div>
         <div class="block-body">
-          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → House Extensions Malvern page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does a house extension cost in Malvern?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Extension costs in Malvern are broadly similar to the wider Worcestershire market — typically £1,500 to £2,200 per square metre for a single storey build. Older Victorian properties may involve additional costs for matching materials. We provide fixed price quotations at no charge — call 01905 831778."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I extend my house in the Great Malvern Conservation Area?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — extensions within the Great Malvern Conservation Area are possible but typically require planning permission rather than Permitted Development. Malvern Hills District Council considers scale, design and materials carefully. Well-designed extensions using sympathetic materials are regularly approved. We advise on the planning approach as part of a free site visit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you work on rural properties around Malvern?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — a significant proportion of our Malvern work is on rural and village properties. We are comfortable with restricted access, older construction methods including stone walls, solid floors and lime mortar, and the logistics of rural sites."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How far from Malvern do you work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our base in Callow End is approximately 3 miles from Great Malvern. We cover all of the Malvern Hills district extending to Upton upon Severn, Pershore, Ledbury and into Herefordshire. Call 01905 831778 to discuss your location."
-      }
-    }
-  ]
-}
-&lt;/script&gt;</div>
-        </div>
-      </div>
-
-      <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Garage Builders page</span><span class="block-chevron">▼</span></div>
-        <div class="block-body">
-          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Garage Builders page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does it cost to build a garage in Worcester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A new single masonry garage in Worcester typically costs £20,000–£28,000 fully completed. A double garage is typically £32,000–£45,000 depending on size and specification. These are substantially higher than timber kit alternatives but a masonry garage adds real lasting value to your property. We provide fixed price quotations at no charge."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need planning permission to build a garage in Worcestershire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In most cases a new detached garage in Worcestershire can be built under Permitted Development without full planning permission, provided conditions on size, height and positioning are met. Rules are more restrictive in conservation areas. We advise on the planning position as part of our free site visit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does it take to build a new garage?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A new single or double masonry garage typically takes 4 to 7 weeks from groundwork to completion. Garages requiring planning permission will have that timescale added — planning applications in Worcestershire currently take around 8 weeks for straightforward projects."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you match the brickwork of my existing house?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — matching materials is something we prioritise on every garage project. We source matching brick, block and roof tile from our established supplier network across Worcestershire, including period-appropriate materials for Victorian and Edwardian properties."
-      }
-    }
-  ]
-}
-&lt;/script&gt;</div>
-        </div>
-      </div>
-
-      <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Loft Conversions page</span><span class="block-chevron">▼</span></div>
-        <div class="block-body">
-          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Loft Conversions page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does a loft conversion cost in Worcester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A roof light loft conversion in Worcester typically costs £25,000–£38,000 fully completed. A dormer loft conversion typically ranges from £38,000–£60,000 depending on size and whether an en-suite is included. All quotations are fixed price. Call 01905 831778 to arrange a free site assessment."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my loft suitable for conversion?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The two key factors are headroom and roof structure. You generally need at least 2.2 metres from floor to ridge for a dormer conversion, or 2.5 metres for a roof light conversion. Traditional cut rafter roofs (pre-1960s) are straightforward to convert. Trussed rafter roofs are more complex but still convertible. We assess suitability at no charge during our initial site visit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a loft conversion take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A roof light conversion typically takes 5 to 8 weeks. A dormer conversion usually takes 8 to 12 weeks. Loft conversions are generally less disruptive than ground floor extensions — most structural work happens at roof level."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you carry out loft conversions across Malvern as well as Worcester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — we cover the full Worcestershire area including Worcester, Great Malvern, Malvern Wells, Droitwich, Pershore and surrounding villages. Properties in Great Malvern's conservation area may need planning permission for dormers even where Permitted Development might otherwise apply."
-      }
-    }
-  ]
-}
-&lt;/script&gt;</div>
-        </div>
-      </div>
-
-      <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Landscaping page</span><span class="block-chevron">▼</span></div>
-        <div class="block-body">
-          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Landscaping page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What size of landscaping project do you take on?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We focus on larger scale external works — projects involving significant earthmoving, retaining structures over 600mm, major driveway installations, or budgets above approximately £15,000. Smaller decorative garden work is better served by a specialist landscaping company."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you install drainage as part of landscaping work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — drainage is frequently a key component of our external works projects. This includes surface water drainage, soakaway installation, inspection chambers and connection to existing drainage systems across Worcester and Malvern."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does landscaping cost in Worcestershire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A substantial block-paved driveway might cost £12,000–£20,000. A terracing scheme with retaining walls could range from £20,000 to £60,000 or more. We provide fully itemised fixed price quotations after a site visit. Call 01905 831778."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you combine landscaping with an extension project?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — and this is often the most cost-effective approach. With groundwork machinery already on site for an extension or garage, adding driveway or terracing work saves significantly on mobilisation costs. We discuss external works as part of every extension quotation."
-      }
-    }
-  ]
-}
-&lt;/script&gt;</div>
-        </div>
-      </div>
-
-      <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">FAQPage schema — Renovations page</span><span class="block-chevron">▼</span></div>
-        <div class="block-body">
-          <div class="copy-area"><span class="copy-label">Paste into Wix Custom Code → Head → Renovations page only</span><button class="copy-btn" onclick="cp(this)">Copy</button>&lt;script type="application/ld+json"&gt;
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does a house renovation cost in Worcester?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A single room renovation typically costs £8,000–£25,000. A full house renovation might range from £40,000–£150,000 or more depending on property size and finish standard. We provide fully itemised fixed price quotations after a thorough site assessment. Call 01905 831778."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need building regulations approval for renovation work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Cosmetic renovations generally do not require building regulations approval. However structural alterations, electrical rewires, new bathrooms with drainage alterations, and changes affecting fire safety typically do require sign-off. We advise on what requires approval as part of every project consultation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a house renovation take in Worcestershire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A kitchen or bathroom renovation typically takes 2 to 4 weeks. A partial renovation of several rooms might take 6 to 10 weeks. A full house renovation is usually 3 to 6 months. We provide a written programme broken down by stage before any project starts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you renovate a property while tenants are in occupation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We have experience carrying out phased renovation programmes on occupied properties for landlords needing to minimise void periods. Whether this is achievable depends on the scope of work — we advise honestly during our initial site visit."
-      }
-    }
-  ]
-}
-&lt;/script&gt;</div>
-        </div>
-      </div>
-
-      <div class="content-block">
-        <div class="block-header" onclick="toggleBlock(this)"><span class="block-type bt-technical">Technical</span><span class="block-title">How to add schema in Wix — step by step</span><span class="block-chevron">▼</span></div>
-        <div class="block-body">
-          <div class="info-box">Each schema block above must be added to its specific page separately — not sitewide. The LocalBusiness schema goes on the homepage only. Each FAQPage schema goes on its own service page.</div>
           <ul class="task-list">
             <li class="task-item">
               <div class="task-check" onclick="toggleTask(this)"></div>
               <div class="task-content">
                 <div class="task-title">Add LocalBusiness schema to homepage</div>
-                <div class="task-desc">In Wix: Settings → Custom Code → Add Custom Code → paste the LocalBusiness script → Code placement: Head → Add to: Specific pages → select Home → Apply</div>
+                <div class="task-desc">Wix dashboard → Settings → Custom Code → Add Custom Code → paste the LocalBusiness script above → Code placement: Head → Add to: Specific pages → select Home → Apply → Publish</div>
                 <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
               </div>
             </li>
             <li class="task-item">
               <div class="task-check" onclick="toggleTask(this)"></div>
               <div class="task-content">
-                <div class="task-title">Add FAQPage schema to Extensions Worcester</div>
-                <div class="task-desc">Same process as above — select the House Extensions Worcester page specifically</div>
+                <div class="task-title">Add Service schema to House Extensions Worcester</div>
+                <div class="task-desc">Same process — Add Custom Code → paste the Extensions Worcester Service schema → Head → select the House Extensions Worcester page only</div>
                 <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
               </div>
             </li>
             <li class="task-item">
               <div class="task-check" onclick="toggleTask(this)"></div>
               <div class="task-content">
-                <div class="task-title">Add FAQPage schema to Extensions Malvern</div>
+                <div class="task-title">Add Service schema to House Extensions Malvern</div>
                 <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
               </div>
             </li>
             <li class="task-item">
               <div class="task-check" onclick="toggleTask(this)"></div>
               <div class="task-content">
-                <div class="task-title">Add FAQPage schema to Garage Builders page</div>
+                <div class="task-title">Add Service schema to Garage Builders page</div>
                 <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
               </div>
             </li>
             <li class="task-item">
               <div class="task-check" onclick="toggleTask(this)"></div>
               <div class="task-content">
-                <div class="task-title">Add FAQPage schema to Loft Conversions page</div>
+                <div class="task-title">Add Service schema to Loft Conversions page</div>
                 <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
               </div>
             </li>
             <li class="task-item">
               <div class="task-check" onclick="toggleTask(this)"></div>
               <div class="task-content">
-                <div class="task-title">Add FAQPage schema to Landscaping page</div>
+                <div class="task-title">Add Service schema to Landscaping page</div>
                 <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
               </div>
             </li>
             <li class="task-item">
               <div class="task-check" onclick="toggleTask(this)"></div>
               <div class="task-content">
-                <div class="task-title">Add FAQPage schema to Renovations page</div>
+                <div class="task-title">Add Service schema to Renovations page</div>
                 <div class="task-badges"><span class="badge badge-technical">Technical</span><span class="badge badge-free">Free</span></div>
               </div>
             </li>
             <li class="task-item">
               <div class="task-check" onclick="toggleTask(this)"></div>
               <div class="task-content">
-                <div class="task-title">Validate all schema using Google's Rich Results Test</div>
-                <div class="task-desc">After adding each schema block, go to search.google.com/test/rich-results → paste the page URL → run the test. It will confirm the schema is valid and show a preview of how the enhanced result may appear in Google search. Fix any errors flagged before moving on.</div>
+                <div class="task-title">Validate using Google's Rich Results Test</div>
+                <div class="task-desc">After publishing: go to search.google.com/test/rich-results → paste each page URL → confirm no errors. Fix anything flagged before moving on.</div>
                 <div class="task-badges"><span class="badge badge-free">Free</span><span class="badge badge-technical">Technical</span></div>
               </div>
             </li>
@@ -2402,7 +2246,7 @@ Most projects move from first enquiry to quotation within 7–10 days.</div>
       </div>
     </div>
 
-    <!-- BLOG POSTS -->
+        <!-- BLOG POSTS -->
     <div class="content-page" id="cp-11">
       <div class="page-intro">
         <h3>Blog Posts — 3 Priority Articles</h3>
